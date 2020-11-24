@@ -109,8 +109,8 @@ async def kang(args):
                 emoji = splat[1]
             else:
                 pack = splat[1]
-        packname = f"{user.username}_{pack}"
-        packnick = f"@{user.username}'s_{pack}"
+        packname = f"{user.username}{pack}"
+        packnick = f"@{user.username}'s{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
         if is_anim:
@@ -143,11 +143,11 @@ async def kang(args):
                     except ValueError:
                         pack = 1
                     if is_anim:
-                        packname = f"{user.username}_{pack}_anim"
-                        packnick = f"@{user.username}'s_{pack} (Animated)"
+                        packname = f"{user.username}{pack}_anim"
+                        packnick = f"@{user.username}'s{pack} (Animated)"
                     else:
-                        packname = f"{user.username}_{pack}"
-                        packnick = f"@{user.username}'s_{pack}"
+                        packname = f"{user.username}{pack}"
+                        packnick = f"@{user.username}'s{pack}"
                     await catevent.edit(
                         "`Switching to Pack "
                         + str(pack)
