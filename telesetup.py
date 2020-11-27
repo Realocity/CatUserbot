@@ -8,10 +8,10 @@ from telethon.sessions import StringSession
 from telethon.sync import TelegramClient
 
 print(
-    """Please go-to my.telegram.org
-Login using your Telegram account
-Click on API Development Tools
-Create a new application, by entering the required details"""
+    """1. Login to your Telegram account with the phone number of the developer account to use.
+2. Click under API Development tools.
+3. A Create new application window will appear. Fill in your application details. There is no need to enter any URL, and only the first two fields (App title and Short name) can currently be changed later.
+4. Click on Create application at the end. Remember that your API hash is secret and Telegram won’t let you revoke it. Don’t post it anywhere!"""
 )
 APP_ID = int(input("Enter APP ID here: "))
 API_HASH = input("Enter API HASH here: ")
