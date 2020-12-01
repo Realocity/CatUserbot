@@ -4,16 +4,25 @@ by  @sandy1709 ( https://t.me/mrconfused  )
 # songs finder for catuserbot
 
 import asyncio
+import base64
 import os
 from pathlib import Path
 
-import pybase64
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from validators.url import url
 
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
-from . import CMD_HELP, name_dl, reply_id, runcmd, song_dl, video_dl, yt_search
+from . import (
+    CMD_HELP,
+    hmention,
+    name_dl,
+    reply_id,
+    runcmd,
+    song_dl,
+    video_dl,
+    yt_search,
+)
 
 # =========================================================== #
 #                           STRINGS                           #
@@ -30,6 +39,8 @@ SONGBOT_BLOCKED_STRING = "<code>Please unblock @songdl_bot and try again</code>"
 @bot.on(admin_cmd(pattern="(song|song320)($| (.*))"))
 @bot.on(sudo_cmd(pattern="(song|song320)($| (.*))", allow_sudo=True))
 async def _(event):
+    if event.fwd_from:
+        return
     reply_to_id = await reply_id(event)
     reply = await event.get_reply_message()
     if event.pattern_match.group(2):
@@ -40,7 +51,7 @@ async def _(event):
     else:
         await edit_or_reply(event, "`What I am Supposed to find `")
         return
-    cat = pybase64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+    cat = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
     catevent = await edit_or_reply(event, "`wi8..! I am finding your song....`")
     video_link = await yt_search(str(query))
     if not url(video_link):
@@ -86,9 +97,10 @@ async def _(event):
         event.chat_id,
         song_file,
         force_document=False,
-        caption=query,
+        caption=f"<b><i>➥ Song :- {query}</i></b>\n<b><i>➥ Uploaded by :- {hmention}</i></b>",
         thumb=catthumb,
         supports_streaming=True,
+        parse_mode="html",
         reply_to=reply_to_id,
     )
     await catevent.delete()
@@ -109,6 +121,8 @@ async def delete_messages(event, chat, from_message):
 @bot.on(admin_cmd(pattern="vsong( (.*)|$)"))
 @bot.on(sudo_cmd(pattern="vsong( (.*)|$)", allow_sudo=True))
 async def _(event):
+    if event.fwd_from:
+        return
     reply_to_id = await reply_id(event)
     reply = await event.get_reply_message()
     if event.pattern_match.group(1):
@@ -119,7 +133,7 @@ async def _(event):
     else:
         event = await edit_or_reply(event, "What I am Supposed to find")
         return
-    cat = pybase64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+    cat = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
     catevent = await edit_or_reply(event, "`wi8..! I am finding your song....`")
     video_link = await yt_search(str(query))
     if not url(video_link):
@@ -161,9 +175,10 @@ async def _(event):
         event.chat_id,
         vsong_file,
         force_document=False,
-        caption=query,
+        caption=f"<b><i>➥ Song :- {query}</i></b>\n<b><i>➥ Uploaded by :- {hmention}</i></b>",
         thumb=catthumb,
         supports_streaming=True,
+        parse_mode="html",
         reply_to=reply_to_id,
     )
     await catevent.delete()
@@ -208,7 +223,7 @@ async def cat_song_fetcer(event):
         await event.client.send_file(
             event.chat_id,
             music,
-            caption=f"<b>➥ Song :- <code>{song}</code></b>",
+            caption=f"<b><i>➥ Song :- {query}</i></b>\n<b><i>➥ Uploaded by :- {hmention}</i></b>",
             parse_mode="html",
             reply_to=reply_id_,
         )
@@ -218,7 +233,7 @@ async def cat_song_fetcer(event):
 
 CMD_HELP.update(
     {
-        "getsongs": "**Plugin : **`songs`\
+        "songs": "**Plugin : **`songs`\
         \n\n  •**Syntax : **`.song <query/reply>`\
         \n  •**Function : **__searches the song you entered in query from youtube and sends it, quality of it is 128k__\
         \n\n  •**Syntax : **`.song320 <query/reply>`\
