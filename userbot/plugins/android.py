@@ -131,8 +131,8 @@ async def codename_info(request):
     await edit_or_reply(request, reply)
 
 
-@bot.on(admin_cmd(outgoing=True, pattern=r"specs(?: |)([\S]*)(?: |)([\s\S]*)"))
-@bot.on(sudo_cmd(pattern=r"specs(?: |)([\S]*)(?: |)([\s\S]*)", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern=r"aspecs(?: |)([\S]*)(?: |)([\s\S]*)"))
+@bot.on(sudo_cmd(pattern=r"aspecs(?: |)([\S]*)(?: |)([\s\S]*)", allow_sudo=True))
 async def devices_specifications(request):
     if request.fwd_from:
         return
@@ -146,7 +146,7 @@ async def devices_specifications(request):
         brand = textx.text.split(" ")[0]
         device = " ".join(textx.text.split(" ")[1:])
     else:
-        await edit_or_reply(request, "`Usage: .specs <brand> <device>`")
+        await edit_or_reply(request, "`Usage: .aspecs <brand> <device>`")
         return
     all_brands = (
         BeautifulSoup(
@@ -232,16 +232,16 @@ async def twrp(request):
 
 CMD_HELP.update(
     {
-        "android": "**Plugin : **`android`\
-\n\n  •  **Syntax : **`.magisk`\
-\n  •  **Function :** __Get latest Magisk releases__\
-\n\n  •  **Syntax : **`.device <codename>`\
-\n  •  **Function :** __Get info about android device codename or model.__\
-\n\n  •  **Syntax : **`.codename <brand> <device>`\
-\n  •  **Function :** __Search for android device codename.__\
-\n\n  •  **Syntax : **`.specs <brand> <device>`\
-\n  •  **Function :** __Get device specifications info.__\
-\n\n  •  **Syntax : **`.twrp <codename>`\
-\n  •  **Function : **__Get latest twrp download for android device.__"
+        "android": "__**PLUGIN NAME :** Android__\
+\n\n📌** CMD ➥** `.magisk`\
+\n**USAGE   ➥  **Get latest Magisk releases\
+\n\n📌** CMD ➥** `.device` <codename>\
+\n**USAGE   ➥  **Get info about android device codename or model.\
+\n\n📌** CMD ➥** `.codename` <brand> <device>\
+\n**USAGE   ➥  **Search for android device codename.\
+\n\n📌** CMD ➥** `.aspecs` <brand> <device>\
+\n**USAGE   ➥  **Get device specifications info.\
+\n\n📌** CMD ➥** `.twrp` <codename>\
+\n**USAGE   ➥  **Get latest twrp download for android device."
     }
 )

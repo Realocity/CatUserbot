@@ -605,28 +605,28 @@ async def get_user_from_id(user, event):
 
 CMD_HELP.update(
     {
-        "admin": "**Plugin : **`admin`\
-        \n\n  •  **Syntax : **`.setgpic` <reply to image>\
-        \n  •  **Usage : **Changes the group's display picture\
-        \n\n  •  **Syntax : **`.promote` <username/reply> <custom rank (optional)>\
-        \n  •  **Usage : **Provides admin rights to the person in the chat.\
-        \n\n  •  **Syntax : **`.demote `<username/reply>\
-        \n  •  **Usage : **Revokes the person's admin permissions in the chat.\
-        \n\n  •  **Syntax : **`.ban` <username/reply> <reason (optional)>\
-        \n  •  **Usage : **Bans the person off your chat.\
-        \n\n  •  **Syntax : **`.unban` <username/reply>\
-        \n  •  **Usage : **Removes the ban from the person in the chat.\
-        \n\n  •  **Syntax : **`.mute` <username/reply> <reason (optional)>\
-        \n  •  **Usage : **Mutes the person in the chat, works on admins too.\
-        \n\n  •  **Syntax : **`.unmute` <username/reply>\
-        \n  •  **Usage : **Removes the person from the muted list.\
-        \n\n  •  **Syntax : **`.pin `<reply> or `.pin loud`\
-        \n  •  **Usage : **Pins the replied message in Group\
-        \n\n  •  **Syntax : **`.unpin `<reply> or `.unpin all`\
-        \n  •  **Usage : **Unpins the replied message in Group\
-        \n\n  •  **Syntax : **`.kick `<username/reply> \
-        \n  •  **Usage : **kick the person off your chat.\
-        \n\n  •  **Syntax : **`.iundlt`\
-        \n  •  **Usage : **display last 5 deleted messages in group."
+        "admin": "__**PLUGIN NAME :** Admin__\
+\n\n📌** CMD ➥** `.setgpic` <reply to image>\
+\n**USAGE   ➥  **Changes the group's display picture\
+\n\n📌** CMD ➥** `.promote` <username/reply> <custom rank (optional)>\
+\n**USAGE   ➥  **Provides admin rights to the person in the chat.\
+\n\n📌** CMD ➥** `.demote` <username/reply>\
+\n**USAGE   ➥  **Revokes the person's admin permissions in the chat.\
+\n\n📌** CMD ➥** `.ban` <username/reply> <reason (optional)>\
+\n**USAGE   ➥  **Bans the person off your chat.\
+\n\n📌** CMD ➥** `.unban` <username/reply>\
+\n**USAGE   ➥  **Removes the ban from the person in the chat.\
+\n\n📌** CMD ➥** `.mute` <username/reply> <reason (optional)>\
+\n**USAGE   ➥  **Mutes the person in the chat, works on admins too.\
+\n\n📌** CMD ➥** `.unmute` <username/reply>\
+\n**USAGE   ➥  **Removes the person from the muted list.\
+\n\n📌** CMD ➥** `.pin` <reply> or `.pin loud`\
+\n**USAGE   ➥  **Pins the replied message in Group\
+\n\n📌** CMD ➥** `.unpin` <reply> or `.unpin all`\
+\n**USAGE   ➥  **Unpins the replied message in Group\
+\n\n📌** CMD ➥** `.kick` <username/reply> \
+\n**USAGE   ➥  **kick the person off your chat.\
+\n\n📌** CMD ➥** `.iundlt`\
+\n**USAGE   ➥  **display last 5 deleted messages in group."
     }
 )

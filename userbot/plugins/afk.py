@@ -109,12 +109,16 @@ async def on_afk(event):
         msg = None
         if link and reason:
             message_to_reply = (
-                f"**I am AFK .\n\nAFK Since {endtime}\nReason : **{reason}"
+                f"**I am AFK**\n\n**AFK Since :** `{endtime}`\n**Reason : **{reason}"
             )
         elif reason:
-            message_to_reply = f"**I am AFK .\n\nAFK Since {endtime}\nReason : {reason}**\n\n__I promise He'll back in a few light years__"
+            message_to_reply = (
+                f"**I am AFK\n\nAFK Since :** `{endtime}`\n**Reason : **`{reason}`"
+            )
         else:
-            message_to_reply = f"**I am AFK .\n\nAFK Since {endtime}\nReason : Not Mentioned ( ಠ ʖ̯ ಠ)**\n\n__I promise He'll back in a few light years__"
+            message_to_reply = (
+                f"`I am AFK\n\nAFK Since :{endtime}\nReason : Not Mentioned ( ಠ ʖ̯ ಠ)`"
+            )
         if event.chat_id not in Config.UB_BLACK_LIST_CHAT:
             msg = await event.reply(message_to_reply)
         if event.chat_id in last_afk_message:
@@ -166,9 +170,9 @@ async def _(event):
             afk_time = datetime.now()
         USERAFK_ON = f"on: {reason}"
         if reason:
-            await edit_delete(event, f"**I shall be Going afk! because ~** {reason}", 5)
+            await edit_delete(event, f"`I shall be Going afk! because ~` {reason}", 5)
         else:
-            await edit_delete(event, f"**I shall be Going afk! **", 5)
+            await edit_delete(event, f"`I shall be Going afk! `", 5)
         if BOTLOG:
             if reason:
                 await event.client.send_message(
@@ -184,13 +188,12 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "afk": "**Plugin : **`afk`\
-        \n\n  •  **Syntax : **`.afk [Optional Reason]`\
-        \n  •  **Function : **__Sets you as afk.\nReplies to anyone who tags/PM's \
-        \you telling them that you are AFK(reason).\n\nSwitches off AFK when you type back anything, anywhere.\
-        \afk means away from keyboard/keypad.__\
-        \n\n  •  **Note :** If you want AFK with hyperlink use [ ; ] after reason, then paste the media link.\
-        \n  •  **Example :** `.afk busy now ;<Media_link>`\
+        "afk": "__**PLUGIN NAME :** Afk__\
+\n\n📌** CMD ➥** `.afk` [Optional Reason]\
+\n**USAGE   ➥  **Sets you as afk.\nReplies to anyone who tags/PM's \
+you telling them that you are AFK(reason)\n\n__Switches off AFK when you type back anything, anywhere.__\
+\n\n**Note :** If you want AFK with hyperlink use [ ; ] after reason, then paste the media link.\
+\n**Example :** `.afk busy now ;<Media_link>`\
 "
     }
 )

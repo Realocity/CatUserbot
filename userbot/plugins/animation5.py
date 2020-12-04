@@ -1,4 +1,4 @@
-# https://github.com/Jisan09/catuserbot credits to @Jisan7509
+# https://github.com/Realocity/catuserbot credits to @Jisan7509
 
 import asyncio
 
@@ -145,7 +145,7 @@ async def _(event):
         "😧",
         "😡",
         "😢",
-        "__**[Good to See you guys....]**__(github.com/Jisan09/catuserbot)",
+        "__**[Good to See you guys....]**__(github.com/Realocity/catuserbot)",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
