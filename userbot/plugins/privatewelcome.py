@@ -128,17 +128,17 @@ async def show_welcome(event):
         return
     cws = getcurrent_welcome_settings(event.chat_id)
     if not cws:
-        await edit_or_reply(event, "`No pwelcome message saved here.`")
+        await edit_or_reply(event, "`No private welcome message saved here.`")
         return
     if cws.f_mesg_id:
         msg_o = await bot.get_messages(entity=BOTLOG_CHATID, ids=int(cws.f_mesg_id))
         await edit_or_reply(
-            event, "`I am currently pwelcoming new users with this welcome note.`"
+            event, "`I am currently private welcoming new users with this welcome note.`"
         )
         await event.reply(msg_o.message, file=msg_o.media)
     elif cws.reply:
         await edit_or_reply(
-            event, "`I am currently pwelcoming new users with this welcome note.`"
+            event, "`I am currently private welcoming new users with this welcome note.`"
         )
         await event.reply(cws.reply)
 

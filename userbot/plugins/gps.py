@@ -32,7 +32,7 @@ async def gps(event):
     if not input_str:
         return await event.edit("what should i find give me location.")
 
-    await event.edit("finding")
+    await event.edit("Wait nibbu finding")
 
     geolocator = Nominatim(user_agent="catuserbot")
     geoloc = geolocator.geocode(input_str)
@@ -45,7 +45,7 @@ async def gps(event):
         )
         await event.delete()
     else:
-        await event.edit("i coudn't find it")
+        await event.edit("Sorry nibbu, i coudn't find it")
 
 
 @bot.on(sudo_cmd(pattern="gps ?(.*)", allow_sudo=True))
@@ -60,7 +60,7 @@ async def gps(event):
     if not input_str:
         return await event.reply("what should i find give me location.")
 
-    cat = await event.reply("finding")
+    cat = await event.reply("Wait nibbu finding")
 
     geolocator = Nominatim(user_agent="catuserbot")
     geoloc = geolocator.geocode(input_str)
@@ -73,7 +73,7 @@ async def gps(event):
         )
         await cat.delete()
     else:
-        await cat.edit("i coudn't find it")
+        await cat.edit("Sorry nibbu, i coudn't find it")
 
 
 CMD_HELP.update(

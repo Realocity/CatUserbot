@@ -69,7 +69,7 @@ async def kakashi(event):
         link = "Status"
     elif link == "goodcat":
         link = "🐱 Cat UserBot 🐱"
-    elif link == "badcat":
+    elif link == "disgustcat":
         link = "My Repo"
     catevent = await edit_or_reply(event, "```Sending your note....```")
     async with event.client.conversation("@kakashi_robot") as conv:
