@@ -214,12 +214,12 @@ async def scam(results, lim):
 
 CMD_HELP.update(
     {
-        "google": "**Plugin :**`google`\
-        \n\n**Syntax :** `.gs <limit> <query>` or `.gs <limit> (replied message)`\
-        \n**Function : **will google  search and sends you top 10 results links.\
-        \n\n**Syntax :** `.grs` reply to image\
-        \n**Function : **will google reverse search the image and shows you the result.\
-        \n\n**Syntax : **`.reverse limit`\
-        \n**Function : **Reply to a pic/sticker to revers-search it on Google Images !!"
+        "google": "__**PLUGIN NAME :** Google__\
+        \n\n📌** CMD ➥** `.gs` <limit> <query> or `.gs <limit> (replied message)`\
+        \n**USAGE   ➥  **Will google  search and sends you top 10 results links.\
+        \n\n📌** CMD ➥** `.grs` reply to image\
+        \n**USAGE   ➥  **Will google reverse search the image and shows you the result.\
+        \n\n📌** CMD ➥** `.reverse`\
+        \n**USAGE   ➥  **Reply to a pic/sticker to revers-search it on Google Images !!"
     }
 )

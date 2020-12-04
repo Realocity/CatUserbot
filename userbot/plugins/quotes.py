@@ -34,9 +34,9 @@ async def quote_search(event):
 
 CMD_HELP.update(
     {
-        "quotes": "**Plugin : **`quotes`\
-    \n\n**Syntax : **`.quote <category>`\
-    \n**Function : **__An api that Fetchs random Quote from `goodreads.com`__\
+        "quotes": "__**PLUGIN NAME :** Quotes__\
+    \n\n📌** CMD ➥** `.quote` <category>\
+    \n**USAGE   ➥  **__An api that Fetchs random Quote from `goodreads.com`__\
     "
     }
 )

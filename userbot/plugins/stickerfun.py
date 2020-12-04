@@ -1,5 +1,4 @@
 # Random RGB Sticklet by @PhycoNinja13b
-# modified by @UniBorg
 # imported from ppe-remix by @heyworld & @DeletedUser420
 # modified by @mrconfused
 
@@ -18,8 +17,8 @@ from . import deEmojify, waifutxt
 # RegEx by https://t.me/c/1220993104/500653 ( @SnapDragon7410 )
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="sttxt(?: |$)(.*)"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern="sttxt(?: |$)(.*)"))
+@bot.on(admin_cmd(outgoing=True, pattern="st(?: |$)(.*)"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern="st(?: |$)(.*)"))
 async def waifu(animu):
     text = animu.pattern_match.group(1)
     reply_to_id = animu.message
@@ -120,11 +119,11 @@ async def get_font_file(client, channel_id, search_kw=""):
 
 CMD_HELP.update(
     {
-        "stickerfun": "**Plugin : **`stickerfun`\
-        \n\n**Syntax : **`.sttxt` <your txt>\
-        \n**Usage : **Anime that makes your writing fun.\
-        \n\n**Syntax : **`.stcr` <your txt>\
-        \n**Usage : **your text as sticker\
+        "stickerfun": "__**PLUGIN NAME :** Stickerfun__\
+    \n\n📌** CMD ➥** `.st` <your txt>\
+    \n**USAGE   ➥  **Anime that makes your writing fun.\
+    \n\n📌** CMD ➥** `.stcr` <your txt>\
+    \n**USAGE   ➥  **Your text as sticker\
     "
     }
 )

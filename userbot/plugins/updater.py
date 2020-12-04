@@ -82,7 +82,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         heroku_applications = heroku.apps()
         if HEROKU_APP_NAME is None:
             await event.edit(
-                "`Please set up the` **HEROKU_APP_NAME** `Var`"
+                "`[HEROKU]`\n`Please set up the` **HEROKU_APP_NAME** `Var`"
                 " to be able to deploy your userbot...`"
             )
             repo.__del__()
@@ -97,7 +97,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             return repo.__del__()
         await event.edit(
-            "`Userbot dyno build in progress, please wait until the process finishes it usually takes 4 to 5 minutes .`"
+            "`[HEROKU]`" "\n`Userbot dyno build in progress, please wait...`"
         )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -123,7 +123,9 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             return await event.delete()
         await event.edit("`Successfully deployed!\n" "Restarting, please wait...`")
     else:
-        await event.edit("`Please set up`  **HEROKU_API_KEY**  ` Var...`")
+        await event.edit(
+            "`[HEROKU]`\n" "`Please set up`  **HEROKU_API_KEY**  ` Var...`"
+        )
     return
 
 
@@ -150,10 +152,8 @@ async def upstream(event):
     event = await edit_or_reply(event, "`Checking for updates, please wait....`")
     off_repo = UPSTREAM_REPO_URL
     force_update = False
-    if HEROKU_API_KEY is None or HEROKU_APP_NAME is None:
-        return await edit_or_reply(
-            event, "`Set the required vars first to update the bot`"
-        )
+    # if HEROKU_API_KEY or HEROKU_APP_NAME is None:
+    # return await edit_or_reply(event, "`Set the required vars first to update the bot`")
     try:
         txt = "`Oops.. Updater cannot continue due to "
         txt += "some problems occured`\n\n**LOGTRACE:**\n"
@@ -227,7 +227,7 @@ async def upstream(event):
 @bot.on(admin_cmd(outgoing=True, pattern=r"goodcat$"))
 @bot.on(sudo_cmd(pattern="goodcat$", allow_sudo=True))
 async def upstream(event):
-    event = await edit_or_reply(event, "`Pulling the bad cat repo wait a sec ....`")
+    event = await edit_or_reply(event, "`Pulling the good cat repo wait a sec ....`")
     off_repo = "https://github.com/sandy1709/catuserbot"
     catcmd = f"rm -rf .git"
     try:
@@ -264,17 +264,17 @@ async def upstream(event):
 
 CMD_HELP.update(
     {
-        "updater": "**Plugin : **`updater`"
-        "\n\n  •  **Syntax : **`.update`"
-        "\n  •  **Function :** Checks if the main userbot repository has any updates "
-        "and shows a changelog if so."
-        "\n\n  •  **Syntax : **`.update now`"
-        "\n  •  **Function :** Update your userbot, "
-        "if there are any updates in your userbot repository.if you restart these goes back to last time when you deployed"
-        "\n\n  •  **Syntax : **`.update deploy`"
-        "\n  •  **Function :** Deploy your userbot.So even you restart it doesnt go back to previous version"
-        "\nThis will triggered deploy always, even no updates."
-        "\n\n  •  **Syntax : **`.goodcat`"
-        "\n  •  **Function :** Shifts from official cat repo to jisan's repo(for gali commands)"
+        "updater": "__**PLUGIN NAME :** Updater__\
+        \n\n📌** CMD ➥** `.update`\
+        \n**Usage :** Checks if the main userbot repository has any updates\
+        \nand shows a changelog if so.\
+        \n\n📌** CMD ➥** `.update now`\
+        \n**USAGE   ➥  **Update your userbot,\
+        \nif there are any updates in your userbot repository.if you restart these goes back to last time when you deployed\
+        \n\n📌** CMD ➥** `.update deploy`\
+        \n**USAGE   ➥  **Deploy your userbot.So even you restart it doesnt go back to previous version\
+        \n\n📌** CMD ➥** `.goodcat`\
+        \n**USAGE   ➥  **Swich to Realocity's unoffical repo to official cat repo.\
+        \nThis will triggered deploy always, even no updates."
     }
 )

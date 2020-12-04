@@ -361,28 +361,28 @@ Year: {}""".format(
 
 CMD_HELP.update(
     {
-        "tools": "**Plugin : **`tools`\
-        \n\n**Syntax : **`.scan` reply to media or file\
-        \n**Function : **__it scans the media or file and checks either any virus is in the file or media__\
-        \n\n**Syntax : **`.makeqr` <content>\
-        \n**Function : **__Make a QR Code from the given content.__\
-        \nExample: .makeqr www.google.com\
-        \n\n**Syntax : **`.barcode `<content>\
-        \n**Function : **__Make a BarCode from the given content.__\
-        \nExample: `.barcode` www.google.com\
-        \n\n**Syntax : **`.decode` <reply to barcode/qrcode> \
-        \n**Function : **__to get decoded content of those codes.__\
-        \n\n**Syntax : **`cal year ; month`\
-        \n**Function : **__Shows you the calendar of given month and year__\
-        \n\n**Syntax : **`.currency` amount (from currency) (to currency)\
-        \n**Function : **__Currency converter for userbot __**Example :** `.currency 10 usd inr`\
-        \n\n**Syntax : **`.currencies`\
-        \n**Function : **__Shows you the some list of currencies__\
-        \n\n**Syntax : **`.ifsc` <IFSC code>\
-        \n**Function : **__to get details of the relevant bank or branch__**Example :** `.ifsc SBIN0016086`\
-        \n\n**Syntax : **`.color` <color_code> \
-        \n**Function : **__sends you a plain image of the color example :__`.color #ff0000`\
-        \n\n**Syntax : **`.xkcd` <query>\
-        \n**Function : **__Searches for the query for the relevant XKCD comic __"
+        "tools": "__**PLUGIN NAME :** Tools__\
+\n\n📌** CMD ➥** `.scan` reply to media or file\
+\n**USAGE   ➥  **It scans the media or file and checks either any virus is in the file or media\
+\n\n📌** CMD ➥** `.makeqr` <content>\
+\n**USAGE   ➥  **Make a QR Code from the given content.\
+\n**Example:** `.makeqr www.google.com`\
+\n\n📌** CMD ➥** `.barcode `<content>\
+\n**USAGE   ➥  **Make a BarCode from the given content.\
+\n**Example:** `.barcode www.google.com`\
+\n\n📌** CMD ➥** `.decode` <reply to barcode/qrcode> \
+\n**USAGE   ➥  **To get decoded content of those codes.\
+\n\n📌** CMD ➥** `.currency` amount (from currency) (to currency)\
+\n**USAGE   ➥  **Currency converter for userbot **Example :** `.currency 10 usd inr`\
+\n\n📌** CMD ➥** `cal year ; month`\
+\n**USAGE   ➥  **Shows you the calendar of given month and year.\
+\n\n📌** CMD ➥** `.currencies`\
+\n**USAGE   ➥  **Shows you the some list of currencies\
+\n\n📌** CMD ➥** `.ifsc` <IFSC code>\
+\n**USAGE   ➥  **To get details of the relevant bank or branch **Example :** `.ifsc SBIN0016086`\
+\n\n📌** CMD ➥** `.color` <color_code> \
+\n**USAGE   ➥  **Sends you a plain image of the color example :`.color #ff0000`\
+\n\n📌** CMD ➥** `.xkcd` <query>\
+\n**USAGE   ➥  **Searches for the query for the relevant XKCD comic "
     }
 )

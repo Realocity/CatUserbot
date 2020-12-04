@@ -51,7 +51,7 @@ async def _(event):
     if os.path.exists(thumb_image_path):
         os.remove(thumb_image_path)
     else:
-        await edit_or_reply(event, "No thumbnail is set to clear")
+        await edit_or_reply(event, "No thumbnail is setted to clear")
     await edit_or_reply(event, "✅ Custom thumbnail cleared succesfully.")
 
 
@@ -96,13 +96,13 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "thumbnail": "**Plugin :** `thumbnail`\
-    \n\n**Syntax :** `.savethumb`\
-    \n**Usage : **Reply to file or video to save it as temporary thumbimage\
-    \n\n**Syntax : **`.clearthumb`\
-    \n**Usage : **To clear Thumbnail no longer you uploads uses custom thumbanail\
-    \n\n**Syntax : **`.getthumb`\
-    \n**Usage : **To get thumbnail of given video or gives your present thumbnail\
+        "thumbnail": "__**PLUGIN NAME :** Thumbnail__\
+    \n\n📌** CMD ➥** `.savethumb`\
+    \n**USAGE   ➥  **Reply to file or video to save it as temporary thumbimage\
+    \n\n📌** CMD ➥** `.clearthumb`\
+    \n**USAGE   ➥  **To clear Thumbnail no longer you uploads uses custom thumbanail\
+    \n\n📌** CMD ➥** `.getthumb`\
+    \n**USAGE   ➥  **To get thumbnail of given video or gives your present thumbnail\
     "
     }
 )

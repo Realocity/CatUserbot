@@ -313,12 +313,12 @@ async def video_catfile(event):
 
 CMD_HELP.update(
     {
-        "upload": "**Plugin :** `upload`\
-    \n\n  •  **Syntax :** `.upload path of file/folder`\
-    \n  •  **Function : **__Uploads the file from the server or list of files from that folder as steamable__\
-    \n\n  •  **Syntax :** `.uploadf path of file/folder`\
-    \n  •  **Function : **__Uploads the file from the server or list of files from that folder as a file__\
-    \n\n  •  **Syntax : **`.circle reply to media or path of media`\
-    \n  •  **Function : **__Uploads video/audio as streamable from the server__"
+        "upload": "__**PLUGIN NAME :** Upload__\
+    \n\n📌** CMD ➥** `.upload` <path of file/folder>\
+    \n**USAGE   ➥  **__Uploads the file from the server or list of files from that folder__\
+    \n\n📌** CMD ➥** `.uploadf` <path of file/folder>\
+    \n**USAGE   ➥  **__Uploads the file from the server or list of files from that folder as a file__\
+    \n\n📌** CMD ➥** `.circle` <reply to media or path of media>\
+    \n**USAGE   ➥  **__Uploads video/audio as streamable from the server__"
     }
 )

@@ -97,8 +97,8 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "download": "**Plugin : **`.download`\
-        \n\n  •  **Syntax : **`.download <link|filename> or reply to media`\
-        \n  •  **Function : **__Downloads the file to the server.__"
+        "download": "__**PLUGIN NAME :** Download__\
+\n\n📌** CMD ➥** `.download` <link|filename> or reply to media\
+\n**USAGE   ➥  **Downloads file to the server."
     }
 )

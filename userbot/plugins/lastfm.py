@@ -223,12 +223,12 @@ async def lastlog(lstlog):
 
 CMD_HELP.update(
     {
-        "lastfm": "**Plugin : **`lastfm`\
-    \n\n**Syntax : **`.lastfm`\
-    \n**Usage : **Shows currently scrobbling track or most recent scrobbles if nothing is playing.\
-    \n\n**Syntax : **`.lastbio <on/off>`\
-    \n**Usage : **Enables/Disables last.fm current playing to bio.\
-    \n\n**Syntax : **`.lastlog <on/off>`\
-    \n**Usage : **Enable/Disable last.fm bio logging in the bot-log group."
+        "lastfm": "__**PLUGIN NAME :** Lastfm\
+    \n\n📌** CMD ➥** `.lastfm`\
+    \n**USAGE   ➥  **Shows currently scrobbling track or most recent scrobbles if nothing is playing.\
+    \n\n📌** CMD ➥** `.lastbio <on/off>`\
+    \n**USAGE   ➥  **Enables/Disables last.fm current playing to bio.\
+    \n\n📌** CMD ➥** `.lastlog <on/off>`\
+    \n**USAGE   ➥  **Enable/Disable last.fm bio logging in the bot-log group."
     }
 )

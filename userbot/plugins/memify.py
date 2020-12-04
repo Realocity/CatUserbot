@@ -36,11 +36,20 @@ def random_color():
     ]
 
 
+CNG_FONTS = "userbot/helpers/styles/impact.ttf"
+FONTS = "1. `ProductSans-BoldItalic.ttf`\n2. `ProductSans-Light.ttf`\n3. `RoadRage-Regular.ttf`\n4. `digital.ttf`\n5. `impact.ttf`"
+font_list = [
+    "ProductSans-BoldItalic.ttf",
+    "ProductSans-Light.ttf",
+    "RoadRage-Regular.ttf",
+    "digital.ttf",
+    "impact.ttf",
+]
+
+
 @bot.on(admin_cmd(outgoing=True, pattern="(mmf|mms) ?(.*)"))
 @bot.on(sudo_cmd(pattern="(mmf|mms) ?(.*)", allow_sudo=True))
 async def memes(cat):
-    if cat.fwd_from:
-        return
     cmd = cat.pattern_match.group(1)
     catinput = cat.pattern_match.group(2)
     reply = await cat.get_reply_message()
@@ -119,9 +128,9 @@ async def memes(cat):
     meme_file = convert_toimage(meme_file)
     meme = "catmeme.jpg"
     if max(len(top), len(bottom)) < 21:
-        await cat_meme(top, bottom, meme_file, meme)
+        await cat_meme(CNG_FONTS, top, bottom, meme_file, meme)
     else:
-        await cat_meeme(top, bottom, meme_file, meme)
+        await cat_meeme(top, bottom, CNG_FONTS, meme_file, meme)
     if cmd != "mmf":
         meme = await convert_tosticker(meme)
     await cat.client.send_file(cat.chat_id, meme, reply_to=catid)
@@ -132,11 +141,24 @@ async def memes(cat):
             os.remove(files)
 
 
+@bot.on(admin_cmd(pattern="cfont (.*)"))
+@bot.on(sudo_cmd(pattern="cfont (.*)", allow_sudo=True))
+async def lang(event):
+    global CNG_FONTS
+    input_str = event.pattern_match.group(1)
+    if input_str not in font_list:
+        catevent = await edit_or_reply(event, "`Give me a correct font name...`")
+        await asyncio.sleep(1)
+        await catevent.edit(f"**Available Fonts names are here:-**\n\n{FONTS}")
+    else:
+        arg = f"userbot/helpers/styles/{input_str}"
+        CNG_FONTS = arg
+        await edit_or_reply(event, f"**Fonts for Memify changed to :-** `{input_str}`")
+
+
 @bot.on(admin_cmd(outgoing=True, pattern="ascii ?(.*)"))
 @bot.on(sudo_cmd(pattern="ascii ?(.*)", allow_sudo=True))
 async def memes(cat):
-    if cat.fwd_from:
-        return
     catinput = cat.pattern_match.group(1)
     reply = await cat.get_reply_message()
     if not (reply and (reply.media)):
@@ -212,8 +234,6 @@ async def memes(cat):
 @bot.on(admin_cmd(pattern="invert$", outgoing=True))
 @bot.on(sudo_cmd(pattern="invert$", allow_sudo=True))
 async def memes(cat):
-    if cat.fwd_from:
-        return
     reply = await cat.get_reply_message()
     if not (reply and (reply.media)):
         await edit_or_reply(cat, "`Reply to supported Media...`")
@@ -296,8 +316,6 @@ async def memes(cat):
 @bot.on(admin_cmd(outgoing=True, pattern="solarize$"))
 @bot.on(sudo_cmd(pattern="solarize$", allow_sudo=True))
 async def memes(cat):
-    if cat.fwd_from:
-        return
     reply = await cat.get_reply_message()
     if not (reply and (reply.media)):
         await edit_or_reply(cat, "`Reply to supported Media...`")
@@ -380,8 +398,6 @@ async def memes(cat):
 @bot.on(admin_cmd(outgoing=True, pattern="mirror$"))
 @bot.on(sudo_cmd(pattern="mirror$", allow_sudo=True))
 async def memes(cat):
-    if cat.fwd_from:
-        return
     reply = await cat.get_reply_message()
     if not (reply and (reply.media)):
         await edit_or_reply(cat, "`Reply to supported Media...`")
@@ -464,8 +480,6 @@ async def memes(cat):
 @bot.on(admin_cmd(outgoing=True, pattern="flip$"))
 @bot.on(sudo_cmd(pattern="flip$", allow_sudo=True))
 async def memes(cat):
-    if cat.fwd_from:
-        return
     reply = await cat.get_reply_message()
     if not (reply and (reply.media)):
         await edit_or_reply(cat, "`Reply to supported Media...`")
@@ -548,8 +562,6 @@ async def memes(cat):
 @bot.on(admin_cmd(outgoing=True, pattern="gray$"))
 @bot.on(sudo_cmd(pattern="gray$", allow_sudo=True))
 async def memes(cat):
-    if cat.fwd_from:
-        return
     reply = await cat.get_reply_message()
     if not (reply and (reply.media)):
         await edit_or_reply(cat, "`Reply to supported Media...`")
@@ -632,8 +644,6 @@ async def memes(cat):
 @bot.on(admin_cmd(outgoing=True, pattern="zoom ?(.*)"))
 @bot.on(sudo_cmd(pattern="zoom ?(.*)", allow_sudo=True))
 async def memes(cat):
-    if cat.fwd_from:
-        return
     reply = await cat.get_reply_message()
     if not (reply and (reply.media)):
         await edit_or_reply(cat, "`Reply to supported Media...`")
@@ -723,8 +733,6 @@ async def memes(cat):
 @bot.on(admin_cmd(outgoing=True, pattern="frame ?(.*)"))
 @bot.on(sudo_cmd(pattern="frame ?(.*)", allow_sudo=True))
 async def memes(cat):
-    if cat.fwd_from:
-        return
     reply = await cat.get_reply_message()
     if not (reply and (reply.media)):
         await edit_or_reply(cat, "`Reply to supported Media...`")
@@ -820,28 +828,30 @@ async def memes(cat):
 
 CMD_HELP.update(
     {
-        "memify": "**Plugin : **`memify`\
-    \n\n  • **Syntax :** `.mmf toptext ; bottomtext`\
-    \n  • **Function : **Creates a image meme with give text at specific locations and sends\
-    \n\n  • **Syntax : **`.mms toptext ; bottomtext`\
-    \n  • **Function : **Creates a sticker meme with give text at specific locations and sends\
-    \n\n  • **Syntax : **`.ascii`\
-    \n  • **Function : **reply to media file to get ascii image of that media\
-    \n\n  • **Syntax : **`.invert`\
-    \n  • **Function : **Inverts the colors in media file\
-    \n\n  • **Syntax : **`.solarize`\
-    \n  • **Function : **Watch sun buring ur media file\
-    \n\n  • **Syntax : **`.mirror`\
-    \n  • **Function : **shows you the reflection of the media file\
-    \n\n  • **Syntax : **`.flip`\
-    \n  • **Function : **shows you the upside down image of the given media file\
-    \n\n  • **Syntax : **`.gray`\
-    \n  • **Function : **makes your media file to black and white\
-    \n\n  • **Syntax : **`.zoom` or `.zoom range`\
-    \n  • **Function : **zooms your media file\
-    \n\n  • **Syntax : **`.frame` or `.frame range` or `.frame range ; fill`\
-    \n  • **Function : **make a frame for your media file\
-    \n  • **fill:** This defines the pixel fill value or color value to be applied. The default value is 0 which means the color is black.\
+        "memify": "__**PLUGIN NAME :** Memify__\
+    \n\n📌** CMD ➥** `.mmf toptext ; bottomtext`\
+    \n**USAGE   ➥  **Creates a image meme with give text at specific locations and sends\
+    \n\n📌** CMD ➥** `.mms toptext ; bottomtext`\
+    \n**USAGE   ➥  **Creates a sticker meme with give text at specific locations and sends\
+    \n\n📌** CMD ➥** `.cfont` <Font Name>\
+    \n**USAGE   ➥  **Change the font style use for memify,\nTo get fonts name use this cmd (`.ls userbot/helpers/styles`)\
+    \n\n📌** CMD ➥** `.ascii`\
+    \n**USAGE   ➥  **Reply to media file to get ascii image of that media\
+    \n\n📌** CMD ➥** `.invert`\
+    \n**USAGE   ➥  **Inverts the colors in media file\
+    \n\n📌** CMD ➥** `.solarize`\
+    \n**USAGE   ➥  **Watch sun buring ur media file\
+    \n\n📌** CMD ➥** `.mirror`\
+    \n**USAGE   ➥  **Shows you the reflection of the media file\
+    \n\n📌** CMD ➥** `.flip`\
+    \n**USAGE   ➥  **Shows you the upside down image of the given media file\
+    \n\n📌** CMD ➥** `.gray`\
+    \n**USAGE   ➥  **Makes your media file to black and white\
+    \n\n📌** CMD ➥** `.zoom` or `.zoom range`\
+    \n**USAGE   ➥  **Zooms your media file\
+    \n\n📌** CMD ➥** `.frame` or `.frame range` or `.frame range ; fill`\
+    \n**USAGE   ➥  **Make a frame for your media file\
+    \n**Fill:** This defines the pixel fill value or color value to be applied. The default value is 0 which means the color is black.\
     "
     }
 )

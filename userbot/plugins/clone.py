@@ -148,11 +148,11 @@ async def get_full_user(event):
 
 CMD_HELP.update(
     {
-        "clone": "**Plugin : **`clone`\
-        \n\n  •  **Syntax :** `.clone`<reply to user whom you want to clone\
-        \n  •  **Function : **clone the replied user account\
-        \n\n  •  **Syntax : **`.revert`\
-        \n  •  **Function : **Reverts back to your profile which you have set in heroku for  AUTONAME, DEFAULT_BIO\
+        "clone": "__**PLUGIN NAME :** Clone__\
+    \n\n📌** CMD ➥** `.clone`<reply to user who you want to clone\
+    \n**USAGE   ➥  **Clone the replied user account\
+    \n\n📌** CMD ➥** `.revert`\
+    \n**USAGE   ➥  **Reverts back to your profile which you have set in heroku for  AUTONAME,DEFAULT_BIO\
     "
     }
 )

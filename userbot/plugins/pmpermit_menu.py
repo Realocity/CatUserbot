@@ -10,9 +10,8 @@ from telethon import events, functions
 
 import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
 
-from . import ALIVE_NAME, PM_START, PMMESSAGE_CACHE, set_key
+from . import PM_START, PMMESSAGE_CACHE, mention, set_key
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "cat"
 PREV_REPLY_MESSAGE = {}
 
 
@@ -30,7 +29,7 @@ async def _(event):
         set_key(PMMESSAGE_CACHE, event.chat_id, event.id)
         PM = (
             "Hello. You are accessing the availabe menu of my master, "
-            f"{DEFAULTUSER}.\n"
+            f"{mention}.\n"
             "__Let's make this smooth and let me know why you are here.__\n"
             "**Choose one of the following reasons why you are here:**\n\n"
             "`a`. To chat with my master\n"

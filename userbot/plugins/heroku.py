@@ -201,6 +201,18 @@ def prettyjson(obj, indent=2, maxlinelength=80):
 
 CMD_HELP.update(
     {
-        "heroku": "Info for Module to Manage Heroku:**\n\n`.usage`\nUsage:__Check your heroku dyno hours status.__\n\n`.set var <NEW VAR> <VALUE>`\nUsage: __add new variable or update existing value variable__\n**!!! WARNING !!!, after setting a variable the bot will restart.**\n\n`.get var or .get var <VAR>`\nUsage: __get your existing varibles, use it only on your private group!__\n**This returns all of your private information, please be cautious...**\n\n`.del var <VAR>`\nUsage: __delete existing variable__\n**!!! WARNING !!!, after deleting variable the bot will restarted**\n\n`.herokulogs`\nUsage:sends you recent 100 lines of logs in heroku"
+        "heroku": "__**PLUGIN NAME :** Heroku__\
+  \n\n📌** CMD ➥** `.usage`\
+  \n**USAGE   ➥  **Check your heroku dyno hours status.\
+  \n\n📌** CMD ➥** `.set var` <NEW VAR> <VALUE>\
+  \n**USAGE   ➥  **Add new variable or update existing value variable\
+  \n\n📌** CMD ➥** `.get var` or `.get var <VAR>`\
+  \n**USAGE   ➥  **Get your existing varibles & valus of that\
+  \n\n📌** CMD ➥** `.del var` <VAR>\
+  \n**USAGE   ➥  **Delete existing variable\
+  \n\n📌** CMD ➥** `.herokulogs`\
+  \n**USAGE   ➥  **Sends you recent 100 lines of logs in heroku\
+  \n\n\n**!!! WARNING !!!, After adding or deleting variable the bot will restarted**\
+  \n**Don't use .get var in public groups.This returns all of your private information, please be cautious...**"
     }
 )

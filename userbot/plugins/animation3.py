@@ -2,9 +2,7 @@ import asyncio
 from collections import deque
 
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
-from . import ALIVE_NAME, CMD_HELP
-
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "cat"
+from . import CMD_HELP, mention
 
 
 @bot.on(admin_cmd(pattern=r"star$", outgoing=True))
@@ -12,10 +10,10 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "cat"
 async def _(event):
     if event.fwd_from:
         return
-    event = await edit_or_reply(event, "`stars.....`")
+    event = await edit_or_reply(event, "star")
     deq = deque(list("🦋✨🦋✨🦋✨🦋✨"))
     for _ in range(48):
-        await asyncio.sleep(0.3)
+        await asyncio.sleep(0.1)
         await event.edit("".join(deq))
         deq.rotate(1)
 
@@ -25,10 +23,10 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    event = await edit_or_reply(event, "`boxs...`")
+    event = await edit_or_reply(event, "box")
     deq = deque(list("🟥🟧🟨🟩🟦🟪🟫⬛⬜"))
     for _ in range(999):
-        await asyncio.sleep(0.3)
+        await asyncio.sleep(0.1)
         await event.edit("".join(deq))
         deq.rotate(1)
 
@@ -38,10 +36,10 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    event = await edit_or_reply(event, "`Raining.......`")
+    event = await edit_or_reply(event, "Raining")
     deq = deque(list("🌬☁️🌩🌨🌧🌦🌥⛅🌤"))
     for _ in range(48):
-        await asyncio.sleep(0.3)
+        await asyncio.sleep(0.1)
         await event.edit("".join(deq))
         deq.rotate(1)
 
@@ -52,17 +50,17 @@ async def _(event):
     if event.fwd_from:
         return
     animation_interval = 3
-    animation_ttl = range(12)
-    event = await edit_or_reply(event, "`Deploying...`")
+    animation_ttl = range(0, 12)
+    event = await edit_or_reply(event, "Deploying...")
     animation_chars = [
         "**Heroku Connecting To Latest Github Build **",
-        f"**Build started by user** {DEFAULTUSER}",
-        f"**Deploy** `535a74f0` **by user** {DEFAULTUSER}",
+        f"**Build started by user** {mention}",
+        f"**Deploy** `535a74f0` **by user** {mention}",
         "**Restarting Heroku Server...**",
         "**State changed from up to starting**",
         "**Stopping all processes with SIGTERM**",
         "**Process exited with** `status 143`",
-        "**Starting process with command** `python3 -m userbot`",
+        "**Starting process with command** `python3 -m stdborg`",
         "**State changed from starting to up**",
         "__INFO:Userbot:Logged in as 557667062__",
         "__INFO:Userbot:Successfully loaded all plugins__",
@@ -76,8 +74,9 @@ async def _(event):
 @bot.on(admin_cmd(pattern=r"dump$", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"dump$", allow_sudo=True))
 async def _(message):
-    if event.fwd_from:
+    if message.fwd_from:
         return
+    event = await edit_or_reply(message, "droping....")
     try:
         obj = message.pattern_match.group(1)
         if len(obj) != 3:
@@ -85,7 +84,6 @@ async def _(message):
         inp = " ".join(obj)
     except IndexError:
         inp = "🥞 🎂 🍫"
-    event = await edit_or_reply(message, "`droping....`")
     u, t, g, o, s, n = inp.split(), "🗑", "<(^_^ <)", "(> ^_^)>", "⠀ ", "\n"
     h = [(u[0], u[1], u[2]), (u[0], u[1], ""), (u[0], "", "")]
     for something in reversed(
@@ -185,7 +183,7 @@ async def _(event):
         "🤯",
         "💔",
         "❤",
-        "I Love You❤",
+        "i Love You❤",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
@@ -301,21 +299,9 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "animation3": """**Plugin : **`animation3`
-        
-**Commands in animation3 are **
-  •  `.star`
-  •  `.boxs`
-  •  `.rain`
-  •  `.deploy`
-  •  `.dump`
-  •  `.fleaveme`
-  •  `.loveu`
-  •  `.plane`
-  •  `.police`
-  •  `.jio`
-  •  `.solarsystem`
-  
-**Function : **__Different kinds of animation commands check yourself for their animation .__"""
+        "animation3": "__**PLUGIN NAME :** Animation3__\
+\n\n📌** CMD ➥** `.star` | `.boxs` | `.rain` | `.deploy` | `.dump` | `.fleaveme` | `.loveu` | `.plane` | `.police` | `.jio` | `.solarsystem` \
+\n\n**USAGE   ➥  **These are animation bruh..Try & check yourself\
+"
     }
 )

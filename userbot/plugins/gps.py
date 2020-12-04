@@ -58,7 +58,7 @@ async def gps(event):
     input_str = event.pattern_match.group(1)
 
     if not input_str:
-        return await event.reply("what should I find give me location.")
+        return await event.reply("what should i find give me location.")
 
     cat = await event.reply("finding")
 
@@ -78,8 +78,8 @@ async def gps(event):
 
 CMD_HELP.update(
     {
-        "gps": "`.gps` <location name> :\
-      \nUSAGE: sends you a map with the given location as pin \
-      "
+        "gps": "__**PLUGIN NAME :** GPS__\
+      \n\n📌** CMD ➥** `.gps` <location name> :\
+      \n**USAGE   ➥  **Sends you the given location name."
     }
 )

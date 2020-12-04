@@ -263,17 +263,17 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "pastebin": "**Plugin : **`pastebin`\
-        \n\n**Syntax : **`.paste <text/reply>`\
-        \n**Function : **Create a paste or a shortened url using dogbin `https://del.dog/`\
-        \n\n**Syntax : **`.neko <text/reply>`\
-        \n**Function : **Create a paste or a shortened url using nekobin `https://nekobin.com`\
-        \n\n**Syntax : **`.iffuci <text/reply>`\
-        \n**Function : **Create a paste or a shortened url using iffuci `https://www.iffuci.tk`\
-        \n\n**Syntax : **`.getpaste`\
-        \n**Function : **Gets the content of a paste or shortened url from dogbin `https://del.dog/`\
-        \n\n**Syntax : **`.paster <text/reply>`\
-        \n**Function : **Create a instant view or a paste it in telegraph file\
+        "pastebin": "__**PLUGIN NAME :** Pastebin__\
+\n\n📌** CMD ➥** `.paste` <text/reply>\
+\n**USAGE   ➥  **Create a paste or a shortened url using dogbin (https://del.dog/)\
+\n\n📌** CMD ➥** `.getpaste`\
+\n**USAGE   ➥  **Gets the content of a paste or shortened url from dogbin (https://del.dog/)\
+\n\n📌** CMD ➥** `.neko` <reply>\
+\n**USAGE   ➥  **Create a paste or a shortened url using nekobin (https://nekobin.com)\
+\n\n📌** CMD ➥** `.iffuci` <text/reply>\
+\n**USAGE   ➥  **Create a paste or a shortened url using iffuci (https://www.iffuci.tk)\
+\n\n📌** CMD ➥** `.paster` <text/reply>\
+\n**USAGE   ➥  **Create a instant view or a paste it in telegraph file\
   "
     }
 )

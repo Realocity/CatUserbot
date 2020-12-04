@@ -113,12 +113,12 @@ async def glitch(cat):
 
 CMD_HELP.update(
     {
-        "glitch": "**Plugin : **`glitch`\
-    \n\n**Syntax : **`.glitch` reply to media file\
-    \n**Usage :** glitches the given mediafile (gif , stickers , image, videos) to a gif and glitch range is from 1 to 8.\
+        "glitch": "__**PLUGIN NAME :** Glitch__\
+    \n\n📌** CMD ➥** `.glitch` reply to media file\
+    \n**USAGE   ➥  **Glitches the given mediafile(gif , stickers , image, videos) to a gif and glitch range is from 1 to 8.\
     If nothing is mentioned then by default it is 2\
-    \n\n**Syntax : **`.glitchs` reply to media file\
-    \n**Usage :** glitches the given mediafile (gif , stickers , image, videos) to a sticker and glitch range is from 1 to 8.\
+    \n\n📌** CMD ➥** `.glitchs` reply to media file\
+    \n**USAGE   ➥  **Glitches the given mediafile(gif , stickers , image, videos) to a sticker and glitch range is from 1 to 8.\
     If nothing is mentioned then by default it is 2\
     "
     }

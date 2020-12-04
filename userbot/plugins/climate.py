@@ -24,7 +24,7 @@ logging.basicConfig(
 )
 
 # ===== CONSTANT =====
-DEFCITY = "Delhi"
+DEFCITY = "Kolkata"
 # ====================
 OWM_API = Config.OPEN_WEATHER_MAP_APPID
 
@@ -217,12 +217,12 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "climate": "**Plugin : **`climate`\
-        \n\n  •  **Syntax : **`.climate <city>`\
-        \n  •  **Function : **__Gets the weather of a city. By default it is Delhi, change it by setcity__\n\
-        \n\n  •  **Syntax : **`.setcity <city> or .setcity <city>, <country name/code>`\
-        \n  •  **Function : **__Sets your default city so you can just use .weather.__\
-        \n\n  •  **Syntax : **`.wttr <city> `\
-        \n  •  **Function : **__Shows you the climate data of 3 days from today in a image.__"
+        "climate": "__**PLUGIN NAME :** Climate__\
+    \n\n📌** CMD ➥** `.climate` <city> or `.weather` <city>, <country name/code>\
+    \n**USAGE   ➥  **Gets the weather of a city.By default it is delhi change it by setcity.\
+    \n\n📌** CMD ➥** `.wttr` <city>\
+    \n**USAGE   ➥  **Shows you the climate data of 3 days from today in a image.\
+    \n\n📌** CMD ➥** `.setcity` <city> or `.setcity` <city>, <country name/code>\
+    \n**USAGE   ➥  **Sets your default city so you can just use .climate"
     }
 )

@@ -268,28 +268,22 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "autoprofile": """**Plugin : **`autoprofile`
-
-  •  **Syntax : **`.autopic angle`
-  •  **Function : **__Rotating image along with the time on it with given angle if no angle is given then doesnt rotate. You need to set __`DOWNLOAD_PFP_URL_CLOCK`__ in heroku__
-
-  •  **Syntax : **`.digitalpfp`
-  •  **Function : **__Your profile pic changes to digitaltime profile picutre__
-
-  •  **Syntax : **`.bloom`
-  •  **Function : **__Random colour profile pics will be set along with time on it. You need to set__ `DOWNLOAD_PFP_URL_CLOCK`__ in heroku__
-
-  •  **Syntax : **`.autoname`
-  •  **Function : **__for time along with name, you must set __`AUTONAME`__ in the heroku vars first for this to work__
-
-  •  **Syntax : **`.autobio`
-  •  **Function : **__for time along with your bio, Set __`DEFAULT_BIO`__ in the heroku vars first__
-
-  •  **Syntax : **`.end function`
-  •  **Function : **__To stop the given functions like autopic ,difitalpfp , bloom , autoname and autobio__
-
-**⚠️DISCLAIMER⚠️**
-__USING THIS PLUGIN CAN RESULT IN ACCOUNT BAN. WE ARE NOT RESPONSIBLE FOR YOUR BAN.__
-"""
+        "autoprofile": "__**PLUGIN NAME :** Autoprofile__\
+\n\n📌** CMD ➥** `.autopic`\
+\n**USAGE   ➥  **Rotating image along with the time on it .\
+\nfor working this you must set `DOWNLOAD_PFP_URL_CLOCK` in the heroku vars first with telegraph link of required image\
+\n\n📌** CMD ➥** `.digitalpfp`\
+\n**USAGE   ➥  **Your profile pic changes to digitaltime profile picutre \
+\n\n📌** CMD ➥** `.bloom`\
+\n**USAGE   ➥  **Random colour profile pics will be setted along with time on it.\
+\nfor working this you must set `DOWNLOAD_PFP_URL_CLOCK` in the heroku vars first with telegraph link of required image\
+\n\n📌** CMD ➥** `.autoname`\
+\n**USAGE   ➥  **For time along name to work this you must set `AUTONAME`in the heroku vars first \
+\n\n📌** CMD ➥** `.autobio`\
+\n**USAGE   ➥  **For time along with your bio to work this you must set `DEFAULT_BIO` in the heroku vars first \
+\n\n📌** CMD ➥** `.monkeybio`\
+\n**USAGE   ➥  **Set of funny monkey bio's\
+\n\n for stoping these aby command you need to do `.restart` and change them manually\
+"
     }
 )

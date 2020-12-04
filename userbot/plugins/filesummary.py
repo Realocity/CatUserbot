@@ -237,20 +237,10 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "filesummary": """**Plugin : **`filesummary`
-
-**Syntax : **
-  •  `.chatfs`
-  •  `.chatfs username/id`
-**Function : **
-  •  __Shows you the complete media/file summary of the that group__
-
-**Syntax : **
-  •  `.userfs reply`
-  •  `.userfs chat username/id`
-  •  `.userfs user username/id`
-**Function : **
-  •  __Shows you the complete media/file summary of the that User in the group where you want__
-"""
+        "filesummary": "__**PLUGIN NAME :** Filesummary__\
+\n\n📌** CMD ➥** `.chatfs` <or> `.chatfs username/id`\
+\n**USAGE   ➥  **__Shows you the complete media/file summary of the that group__\
+\n\n📌** CMD ➥** `.userfs` <or> `.userfs chat username/id`\
+\n**USAGE   ➥  **__Shows you the complete media/file summary of the that User in the group where you want__"
     }
 )

@@ -59,8 +59,8 @@ async def img_sampler(event):
 
 CMD_HELP.update(
     {
-        "images": "**Plugin :**`images`\
-\n\n**Syntax :** `.img <limit> <Name>` or `.img <limit> (replied message)`\
-    \n**Usage : **do google image search and sends 3 images. default if you havent mentioned limit"
+        "images": "__**PLUGIN NAME :** Images__\
+\n\n📌** CMD ➥** `.img` <count 1-10><Name> or `.img (replied message)`\
+\n**USAGE   ➥  **Search in google and sends your desire number of images\n Default number is 3 images."
     }
 )

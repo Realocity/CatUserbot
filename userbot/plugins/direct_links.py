@@ -353,12 +353,10 @@ def useragent():
 
 CMD_HELP.update(
     {
-        "direct_links": "**Plugin : **`direct`\
-        \n\n**Syntax : **`.direct <url>`\n"
-        "**Function : **Reply to a link or paste a URL to\n"
-        "generate a direct download link\n\n"
-        "List of supported URLs:\n"
-        "`Google Drive - Cloud Mail - Yandex.Disk - AFH - "
-        "ZippyShare - MediaFire - SourceForge - OSDN - GitHub`"
+        "direct": "__**PLUGIN NAME :** Direct links__\
+    \n\n📌** CMD ➥** `.direct` <url>\
+    \n**USAGE   ➥  **Reply to a link or paste a URL to generate a direct download link\
+    \n\n**List of supported URLs:**\
+    `Google Drive - Cloud Mail - Yandex.Disk - AFH - ZippyShare - MediaFire - SourceForge - OSDN - GitHub`"
     }
 )

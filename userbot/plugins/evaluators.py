@@ -107,11 +107,13 @@ async def aexec(code, smessatatus):
 
 CMD_HELP.update(
     {
-        "evaluators": "**Plugin : **`evaluators`\
-        \n\n  •  **Synatax : **`.eval <expr>`:\
-        \n  •  **Function : **__Execute Python script.__\
-        \n\n  •  **Synatax : **`.exec <command>`:\
-        \n  •  **Function : **__Execute a Terminal command on catuserbot server and shows details.__\
+        "evaluators": "__**PLUGIN NAME :** Evaluators__\
+     \n\n📌** CMD ➥** `.eval` <expr>\
+     \n**USAGE   ➥  **Execute Python script.\
+     \n\n📌** CMD ➥** `.exec` <command>\
+     \n**USAGE   ➥  **Execute a bash command on catuserbot server and shows details.\
+     \n\n📌** CMD ➥** `.bash` <command>\
+     \n**USAGE   ➥  **Execute a bash command on catuserbot server and  easy to copy output\
      "
     }
 )

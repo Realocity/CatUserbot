@@ -41,8 +41,8 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "linkpreview": "**Plugin : **`linkpreview`\
-    \n\n**Syntax : **`.ctg` reply to link\
-    \n**Function : **Converts the given link to link preview"
+        "linkpreview": "__**PLUGIN NAME :** Linkpreview__\
+    \n\n📌** CMD ➥** `.ctg` reply to link\
+    \n\n**USAGE   ➥  **Converts the given link to link preview"
     }
 )

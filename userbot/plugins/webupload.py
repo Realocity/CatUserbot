@@ -140,9 +140,11 @@ async def _(event):
         urls = links = re.findall(link_regex, t_response)
         result = ""
         for i in urls:
-            if not result:
+            if result:
+                result += f"\n{i[0]}"
+            else:
                 result = f"**Uploaded File link/links :**"
-            result += f"\n{i[0]}"
+                result += f"\n{i[0]}"
         await editor.edit(result)
     else:
         await editor.edit(error)
@@ -152,12 +154,12 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "webupload": "__**PLUGIN NAME :** __ `webupload`\
-    \n\n**Syntax : **`.webupload` --(`fileio`|`oload`|`anonfiles`|`transfer`|`filebin`|`anonymousfiles`|`vshare`|`bayfiles`) or \
-    \n         `.webupload` (path of file) --(`fileio`|`oload`|`anonfiles`|`transfer`|`filebin`|`anonymousfiles`|`vshare`|`bayfiles`)\
-    \n**Usage : **Upload the file to web according to your choice\
-    \n**Example : **`.webupload --anonfiles` tag this to a file\
-    \n\n**Syntax :** `.labstack` Reply to a media file or provide a directory\
-    \n**Usage : **Upload the file to labstack for 7 days."
+        "webupload": "__**PLUGIN NAME :** Web Upload__\
+    \n\n📌** CMD ➥** `.webupload` --(`fileio`|`oload`|`anonfiles`|`transfer`|`filebin`|`anonymousfiles`|`vshare`|`bayfiles`) or \
+    \n         `.webuplod` (path of file) --(`fileio`|`oload`|`anonfiles`|`transfer`|`filebin`|`anonymousfiles`|`vshare`|`bayfiles`)\
+    \n**USAGE   ➥  **Upload the file to web according to your choice\
+    \nExample: `.webupload --anonfiles` tag this to a file\
+    \n\n📌** CMD ➥** `.labstack` Reply to a media file or provide a directory\
+    \n**USAGE   ➥  **Upload the file to labstack for 7 days."
     }
 )

@@ -118,17 +118,15 @@ async def lst(event):
 
 CMD_HELP.update(
     {
-        "filemanager": "**Plugin :**`filemanager`\
-     \n\nList Files plugin for userbot \
-     \n**Syntax :** `.ls`\
-     \n**Usage :** will return files from current working directory\
-     \n\n**Syntax :** .ls path\
-     \n**Usage :** will return output according to path  \
-     \n\n**Syntax :** .ls file path\
-     \n**Usage :** will return file details\
-     \n\nSimple Module for people who dont wanna use shell executor for listing files.\
-     \n\n**Syntax :** `.rem path`\
-     \n**Usage :** To delete the required item from the bot server\
-"
+        "filemanager": "__**PLUGIN NAME :** File Manager__\
+     \n\n📌** CMD ➥** `.ls`\
+     \n**USAGE   ➥  **Will return files from current working directory\
+     \n\n📌** CMD ➥** `.ls` path\
+     \n**USAGE   ➥  **Will return output according to path  \
+     \n\n📌** CMD ➥** `.ls` file path\
+     \n**USAGE   ➥  **Will return file details\
+     \n\n📌** CMD ➥** `.rem` path\
+     \n**USAGE   ➥  **To delete the required item from the bot server\
+     \n\nSimple Module for people who dont wanna use shell executor for listing files."
     }
 )

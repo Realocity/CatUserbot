@@ -81,11 +81,11 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "quotly": "**Plugin :** `quotly`\
-        \n\n**  •Syntax : **`.q reply to messge`\
-        \n**  •Function : **__Makes your message as sticker quote__\
-        \n\n**  •Syntax : **`.qbot reply to messge`\
-        \n**  •Function : **__Makes your message as sticker quote by @quotlybot__\
+        "quotly": "__**PLUGIN NAME :** Quotly__\
+        \n\n📌** CMD ➥** `.q` <reply to messge>`\
+        \n**USAGE   ➥  **__Makes your message as sticker quote__\
+        \n\n📌** CMD ➥** `.qbot` <reply to messge>\
+        \n**USAGE   ➥  **__Makes your message as sticker quote by @quotlybot__\
         "
     }
 )

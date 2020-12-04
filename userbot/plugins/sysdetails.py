@@ -98,13 +98,13 @@ async def sysdetails(sysd):
 
 CMD_HELP.update(
     {
-        "sysdetails": "**Plugin : **`sysdetails`\
-        \n\n**Syntax : **`.spc`\
-        \n**Function : **__Show system specification.__\
-        \n\n**Syntax : **`.sysd`\
-        \n**Function : **__Shows system information using neofetch.__\
-        \n\n**Syntax : **`.cpu`\
-        \n**Function : **__shows the cpu information__\
+        "sysdetails": "__**PLUGIN NAME :** Sysdetails__\
+        \n\n📌** CMD ➥** `.spc`\
+        \n**USAGE   ➥  **__Show system specification.__\
+        \n\n📌** CMD ➥** `.sysd`\
+        \n**USAGE   ➥  **__Shows system information using neofetch.__\
+        \n\n📌** CMD ➥** `.cpu`\
+        \n**USAGE   ➥  **__shows the cpu information__\
     "
     }
 )

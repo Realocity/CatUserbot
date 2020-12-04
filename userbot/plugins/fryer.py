@@ -176,10 +176,11 @@ async def check_media(reply_message):
 
 CMD_HELP.update(
     {
-        "fryer": "**Syntax :** `.frybot` reply to image or sticker\
-    \n**Usage : **Fries the given sticker or image\
-    \n\n**Syntax : **`.deepfry <1 to 9>` reply to image or sticker\
-    \n**Usage : **Fries the given sticker or image based on level if you dont give anything then it is default to 1\
+        "fryer": "__**PLUGIN NAME :** Fryer__\
+    \n\n📌** CMD ➥** `.frybot` reply to image or sticker\
+    \n**USAGE   ➥  **Frys the given sticker or image\
+    \n\n📌** CMD ➥** `.deepfry` <1 to 9>reply to image or sticker\
+    \n**USAGE   ➥  **Frys the given sticker or image based on level if you dont give anything then it is default to 1\
     "
     }
 )

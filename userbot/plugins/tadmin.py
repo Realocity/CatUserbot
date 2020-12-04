@@ -180,12 +180,12 @@ async def ban(catty):
 
 CMD_HELP.update(
     {
-        "tadmin": "**Plugin :** `tadmin`\
-      \n\n  •  **Syntax : **`.tmute <reply/username/userid> <time> <reason>`\
-      \n  •  **Function : **__Temporary mutes the user for given time.__\
-      \n\n  •  **Syntax : **`.tban <reply/username/userid> <time> <reason>`\
-      \n  •  **Function : **__Temporary bans the user for given time.__\
-      \n\n  •  **Time units : ** __(2m = 2 minutes) ,(3h = 3hours)  ,(4d = 4 days) ,(5w = 5 weeks)\
-      These times are example u can use anything with those units __"
+        "tadmin": "__**PLUGIN NAME :** Tadmin\
+      \n\n📌** CMD ➥** `.tmute <reply/username/userid> <time> <reason>`\
+      \n**USAGE   ➥  **Temporary mutes the user for given time.\
+      \n\n📌** CMD ➥** `.tban <reply/username/userid> <time> <reason>`\
+      \n**USAGE   ➥  **Temporary bans the user for given time.\
+      \n\n**Time units : ** (2m = 2 minutes) ,(3h = 3hours)  ,(4d = 4 days) ,(5w = 5 weeks)\
+      This times are example u can use anything with thoose untis "
     }
 )

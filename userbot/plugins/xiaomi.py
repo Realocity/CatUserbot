@@ -179,21 +179,21 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "xiaomi": "**Plugin :** `Xiaomi`\
+        "xiaomi": "__**PLUGIN NAME :** Xiaomi__\
         \n\n__**For Xiaomeme devices only!**__\
-        \n\n**Syntax :** `.firmware` (codename)\
-        \n**Function : **Get lastest Firmware\
-        \n\n**Syntax :** `.vendor` (codename)\
-        \n**Function : **Get lastest Vendor\
-        \n\n**Syntax :** `.pb` (codename)\
-        \n**Function : **Get latest PBRP\
-        \n\n**Syntax :** `.specs` (codename)\
-        \n**Function : **Get quick spec information about device\
-        \n\n**Syntax :** `.fastboot` (codename)\
-        \n**Function : **Get latest fastboot MIUI\
-        \n\n**Syntax :** `.recovery` (codename)\
-        \n**Function : **Get latest recovery MIUI\
-        \n\n**Syntax :** `.of` (codename)\
-        \n**Function : **Get latest ORangeFox Recovery"
+\n\n📌** CMD ➥** `.firmware` (codename)\
+\n**USAGE   ➥  **Get lastest Firmware\
+\n\n📌** CMD ➥** `.vendor` (codename)\
+\n**USAGE   ➥  **Get lastest Vendor\
+\n\n📌** CMD ➥** `.pb` (codename)\
+\n**USAGE   ➥  **Get latest PBRP\
+\n\n📌** CMD ➥** `.specs` (codename)\
+\n**USAGE   ➥  **Get quick spec information about device\
+\n\n📌** CMD ➥** `.fastboot` (codename)\
+\n**USAGE   ➥  **Get latest fastboot MIUI\
+\n\n📌** CMD ➥** `.recovery` (codename)\
+\n**USAGE   ➥  **Get latest recovery MIUI\
+\n\n📌** CMD ➥** `.of` (codename)\
+\n**USAGE   ➥  **Get latest ORangeFox Recovery"
     }
 )

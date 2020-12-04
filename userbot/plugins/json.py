@@ -55,12 +55,10 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "json": """**Plugin : **`json`
-
-  •  **Syntax : **`.json reply`
-  •  **Function : **__reply to a message to get details of that message in json format__  
-
-  •  **Syntax : **`.yaml reply`
-  •  **Function : **__reply to a message to get details of that message in yaml format__ """
+        "json": """__**PLUGIN NAME :** Json__
+      \n\n📌** CMD ➥** `.json` <reply>
+      \n**USAGE   ➥  **__Reply to a message to get details of that message in json format__  
+      \n\n📌** CMD ➥** `.yaml` <reply>
+      \n**USAGE   ➥  **__Reply to a message to get details of that message in yaml format__ """
     }
 )

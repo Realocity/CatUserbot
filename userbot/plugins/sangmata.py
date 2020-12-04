@@ -83,11 +83,11 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "sangmata": "**Plugin : **`sangmata`\
-    \n\n**Syntax : **`.sg <username/userid/reply>`\
-    \n**Function : **__Shows you the previous name history of user.__\
-    \n\n**Syntax : **`.sgu <username/userid/reply>`\
-    \n**Function : **__Shows you the previous username history of user.__\
+        "sangmata": "__**PLUGIN NAME :** Sangmata__\
+    \n\n📌** CMD ➥** `.sg` <username/userid/reply>\
+    \n**USAGE   ➥  **Shows you the previous name history of user.\
+    \n\n📌** CMD ➥** `.sgu` <username/userid/reply>\
+    \n**USAGE   ➥  **Shows you the previous username history of user.\
     "
     }
 )

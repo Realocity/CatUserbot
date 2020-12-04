@@ -69,8 +69,6 @@ async def typewriter(typew):
 @bot.on(admin_cmd(pattern="repeat (\d*) (.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="repeat (\d*) (.*)", allow_sudo=True))
 async def _(event):
-    if event.fwd_from:
-        return
     cat = ("".join(event.text.split(maxsplit=1)[1:])).split(" ", 1)
     message = cat[1]
     count = int(cat[0])
@@ -196,8 +194,6 @@ async def give(event):
 @bot.on(admin_cmd(pattern=f"sadmin$", outgoing=True))
 @bot.on(sudo_cmd(pattern=f"sadmin$", allow_sudo=True))
 async def _(event):
-    if event.fwd_from:
-        return
     animation_ttl = range(13)
     event = await edit_or_reply(event, "sadmin")
     animation_chars = [
@@ -220,73 +216,22 @@ async def _(event):
         await event.edit(animation_chars[i % 13])
 
 
-@bot.on(admin_cmd(pattern=f"flower", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"flower", allow_sudo=True))
-async def flower(event):
-    if event.fwd_from:
-        return
-    flower = " 🌹"
-    sleepValue = 5
-
-    await event.edit(flower + "        ")
-    await event.edit(flower + flower + "       ")
-    await event.edit(flower + flower + flower + "      ")
-    await event.edit(flower + flower + flower + flower + "     ")
-    await event.edit(flower + flower + flower + flower + flower + "    ")
-    await event.edit(
-        flower + flower + flower + flower + flower + flower + flower + "   "
-    )
-    await event.edit(
-        flower + flower + flower + flower + flower + flower + flower + flower + "  "
-    )
-    await event.edit(
-        flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + " "
-    )
-    await event.edit(
-        flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-    )
-    await asyncio.sleep(sleepValue)
-
-
 CMD_HELP.update(
     {
-        "meme": "**Plugin : **`meme`\
-        \n\n**Commands :**\
-        \n  •  `:/`\
-        \n  •  `-_-`\
-        \n  •  `;_;`\
-        \n  •  `.oof`\
-        \n\n**Functions :**\
-        \n__The above four commands are animation commands__\
-        \n\n**Commands :**\
-        \n  •  `.meme`\
-        \n  •  `.give`\
-        \n\n**Functions :**\
-        \n__The above two commands are animation memes meme by default takes ✈️ and give by default takes 🍭__\
-        \n\n**Syntax : **`.repeat count message`\
-        \n**Function : **try out and check Yourself `.repeat 5 hello`\
-        \n\n**Syntax :** `.type`\
-        \n**Function : **Just a small command to make your keyboard become a typewriter!\
-        \n\n**Syntax :** `.sadmin`\
-        \n**Function : **Fun animation of @admin!\
-        "
+        "meme": "__**PLUGIN NAME :** Meme__\
+\n\n📌** CMD ➥** `:/` or `-_-` or `;_;` \
+\n**USAGE   ➥  **Check yourself ;)\
+\n\n📌** CMD ➥** `.oof`\
+\n**USAGE   ➥  **Ooooof\
+\n\n📌** CMD ➥** `.type`\
+\n**USAGE   ➥  **Just a small command to make your keyboard become a typewriter!\
+\n\n📌** CMD ➥** `.repeat` <count message>\
+\n**USAGE   ➥  **Try out and check Yourself `.repeat 5 hello`\
+\n\n📌** CMD ➥** `.meme` \
+\n**USAGE   ➥  **Try yourself ;)\
+\n\n📌** CMD ➥** `.give` \
+\n**USAGE   ➥  **Share lolipop ;)\
+\n\n📌** CMD ➥** `.sadmin` \
+\n**USAGE   ➥  **Fun animation of @admin!"
     }
 )

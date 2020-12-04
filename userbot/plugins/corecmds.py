@@ -4,11 +4,10 @@ from datetime import datetime
 from pathlib import Path
 
 from ..utils import admin_cmd, edit_or_reply, load_module, remove_plugin, sudo_cmd
-from . import ALIVE_NAME, CMD_HELP, hmention
+from . import CMD_HELP, hmention
 
 DELETE_TIMEOUT = 5
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "cat"
 
 
 @bot.on(admin_cmd(pattern="install$"))
@@ -117,17 +116,15 @@ async def load(event):
 
 CMD_HELP.update(
     {
-        "corecmds": """**Plugin : **`corecmds`
-
-  •  **Command : **`install`
-  •  **Function : **__Reply to any external plugin to install in bot__
-  •  **Command : **`.send <plugin name>`  
-  •  **Function : **__to send any plugin__
-  •  **Command : **`.unload <plugin name>`
-  •  **Function : **__To stop functioning of that plugin__  
-  •  **Command : **`load <plugin name>`
-  •  **Function : **__To load that plugin again__
-  
-**Note : **__To unload a plugin permenantly from bot set __`NO_LOAD`__ var in heroku with that plugin name with space between plugin names__"""
+        "corecmds": "__**PLUGIN NAME :** Corecmds__\
+    \n\n📌** CMD ➥** `.install` <replay on a plugin>\
+    \n**USAGE   ➥  **To install external plugin in bot. \
+    \n\n📌** CMD ➥** `.send` <plugin name>\
+    \n**USAGE   ➥  **To send/share loaded plugin.\
+    \n\n📌** CMD ➥** `.unload` <plugin name>\
+    \n**USAGE   ➥  **To unload any loaded plugin from bot.\
+    \n\n📌** CMD ➥** `.load` <plugin name>\
+    \n**USAGE   ➥  **To load plugins which are installed but unloaded in bot.\
+    "
     }
 )

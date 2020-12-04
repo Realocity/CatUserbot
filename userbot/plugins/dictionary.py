@@ -50,11 +50,11 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "dictionary": "**Plugin :** `dictionary`\
-    \n\n**Syntax :** `.ud query`\
-    \n**Usage : **fetches meaning from Urban dictionary\
-    \n\n**Syntax : **`.meaning query`\
-    \n**Usage : **Fetches meaning of the given word\
+        "dictionary": "__**PLUGIN NAME :** Dictionary__\
+    \n\n📌** CMD ➥** `.ud` query\
+    \n**USAGE   ➥  **Fetches meaning from Urban dictionary\
+    \n\n📌** CMD ➥** `.meaning` query\
+    \n**USAGE   ➥  **Fetches meaning of the given word\
     "
     }
 )

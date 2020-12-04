@@ -140,15 +140,14 @@ async def on_new_message(event):
 
 CMD_HELP.update(
     {
-        "lydia": "**Plugin : **`lydia`\
-    \n\n**Syntax : **`.enai` reply to a user\
-    \n**Function : **your bot will auto reply to the tagged user until you stops it by `.remcf`\
-    \n\n**Syntax : **`.reai` reply to the user\
-    \n**Function : **disables the lydia\
-    \n\n**Syntax : **`.liai`\
-    \n**Function : ** to list the users to whom you enabled ai(lydia)\
-    \n\n for functioning this plugin you need to set the heroku var\
-    \n the key is `LYDIA_API_KEY` and get var from `https://coffeehouse.intellivoid.net/`\
-"
+        "lydia": "__**PLUGIN NAME :** Lydia__\
+    \n\n📌** CMD ➥** `.enai` <reply to user>\
+    \n**USAGE   ➥  **your bot will auto reply to the tagged user until you stops it by `.remcf`\
+    \n\n📌** CMD ➥** `.reai`<replay to user > \
+    \n**USAGE   ➥  **reply to the user to who you want to disable the lydia\
+    \n\n📌** CMD ➥** `.liai` \
+    \n**USAGE   ➥  **to list the users to whom you enabled ai(lydia)\
+    \n\n For functioning this plugin you need to set the heroku var\
+    \n The key is `LYDIA_API_KEY` and get var from [Here](https://coffeehouse.intellivoid.net)"
     }
 )

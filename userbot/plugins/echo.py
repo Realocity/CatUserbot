@@ -1,7 +1,6 @@
 """
 created by @mrconfused and @sandy1709
 Idea by @BlazingRobonix
-
 """
 
 import asyncio
@@ -112,12 +111,13 @@ async def samereply(cat):
 
 CMD_HELP.update(
     {
-        "echo": "**Syntax :** `.addecho` reply to user to whom you want to enable\
-    \n**Usage : **replays his every message for whom you enabled echo\
-    \n\n**Syntax : **`.rmecho` reply to user to whom you want to stop\
-    \n**Usage : **Stops replaying his messages\
-    \n\n**Syntax : **`.listecho`\
-    \n**Usage : **shows the list of users for whom you enabled echo\
+        "echo": "__**PLUGIN NAME :** Echo__\
+    \n\n📌** CMD ➥** `.addecho` reply to user to who you want to enable\
+    \n**USAGE   ➥  **replay's his every message for whom you enabled echo\
+    \n\n📌** CMD ➥** `.rmecho` reply to user to who you want to stop\
+    \n**USAGE   ➥  **Stops replaying his messages\
+    \n\n📌** CMD ➥** `.listecho`\
+    \n**USAGE   ➥  **shows the list of users for who you enabled echo\
     "
     }
 )

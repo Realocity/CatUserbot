@@ -8,8 +8,8 @@ from . import BOTLOG, BOTLOG_CHATID, CMD_HELP, deEmojify
 TRT_LANG = "en"
 
 
-@bot.on(admin_cmd(pattern="tl (.*)"))
-@bot.on(sudo_cmd(pattern="tl (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="tr (.*)"))
+@bot.on(sudo_cmd(pattern="tr (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -24,7 +24,7 @@ async def _(event):
     elif ";" in input_str:
         lan, text = input_str.split(";")
     else:
-        await edit_delete(event, "`.tl LanguageCode` as reply to a message", time=5)
+        await edit_delete(event, "`.tr LanguageCode` as reply to a message", time=5)
         return
     text = deEmojify(text.strip())
     lan = lan.strip()
@@ -108,14 +108,14 @@ async def getTranslate(text, **kwargs):
 
 CMD_HELP.update(
     {
-        "translate": "**Plugin :** `translate`\
-         \n\n**  • Syntax : **`.tl LanguageCode <text/reply>`\
-         \n**  • Function : **Translates given language to destination language\
-         \n\n**  • Syntax : **`.trt <Reply/text>`\
-         \n**  • Function : **it will translate your messege\
-         \n\n**  • Syntax : **`.lang trt LanguageCode`\
-         \n**  • Function : **It will set default langaugeCode for **trt**\
-         \n\n**  • Check here ** [Language codes](https://telegra.ph/Language-codes-11-01)\
+        "translate": "__**PLUGIN NAME :** Translate__\
+         \n\n📌** CMD ➥** `.tr` < [LanguageCode](https://telegra.ph/Jisan-10-13-6) > as reply to a message\
+         \n**USAGE   ➥  **.tr LangaugeCode | text to translate\
+         \n**Example :** `.tr hi`\
+         \n\n📌** CMD ➥** `.trt` Reply to a message\
+         \n**USAGE   ➥  **It will translate your messege\
+         \n\n📌** CMD ➥** `.lang trt` < [LanguageCode](https://telegra.ph/Jisan-10-13-6) >\
+         \n**USAGE   ➥  **It will set default langaugeCode for **trt**\
         "
     }
 )

@@ -101,12 +101,14 @@ async def delete_it(delme):
 
 CMD_HELP.update(
     {
-        "purge": "**Plugin : **`purge`\
-        \n\n**Syntax : **`.purge reply to message to start purge from there`\
-        \n**Function : **__Purges all messages starting from the reply.__\
-        \n\n**Syntax : **`.purgeme <x>`\
-        \n**Function : **__Deletes x amount of your latest messages.__\
-        \n\n**Syntax : **`.del reply to message to delete`\
-        \n**Function : **__Deletes the message you replied to.__"
+        "purge": "__**PLUGIN NAME :** Purge__\
+    \n\n📌** CMD ➥** `.purge`\
+    \n**USAGE   ➥  **Purges all messages starting from the reply.\
+    \n\n📌** CMD ➥** `.purgeme` <x>\
+    \n**USAGE   ➥  **Deletes x amount of your latest messages.\
+    \n\n📌** CMD ➥** `.del`\
+    \n**USAGE   ➥  **Deletes the message you replied to.\
+    \n\n📌** CMD ➥** `.edit` <newmessage>\
+    \n**USAGE   ➥  **Replace your last message with <newmessage>."
     }
 )

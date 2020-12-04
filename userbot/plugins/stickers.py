@@ -115,7 +115,7 @@ async def kang(args):
             packnick = f"{Config.CUSTOM_STICKER_PACKNAME} Vol.{pack}"
         else:
             packnick = f"@{user.username} Vol.{pack}"
-        packname = f"{user.username}_{pack}"
+        packname = f"{user.username}{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
         if is_anim:
@@ -149,17 +149,17 @@ async def kang(args):
                         pack = 1
                     if Config.CUSTOM_STICKER_PACKNAME:
                         if is_anim:
-                            packname = f"{user.username}_{pack}_anim"
+                            packname = f"{user.username}{pack}_anim"
                             packnick = f"{Config.CUSTOM_STICKER_PACKNAME} Vol.{pack} (Animated)"
                         else:
-                            packname = f"{user.username}_{pack}"
+                            packname = f"{user.username}{pack}"
                             packnick = f"{Config.CUSTOM_STICKER_PACKNAME} Vol.{pack}"
                     else:
                         if is_anim:
-                            packname = f"{user.username}_{pack}_anim"
+                            packname = f"{user.username}{pack}_anim"
                             packnick = f"@{user.username} Vol.{pack} (Animated)"
                         else:
-                            packname = f"{user.username}_{pack}"
+                            packname = f"{user.username}{pack}"
                             packnick = f"@{user.username} Vol.{pack}"
                     await catevent.edit(
                         f"`Switching to Pack {str(pack)} due to insufficient space`"
@@ -399,18 +399,18 @@ def char_is_emoji(character):
 
 CMD_HELP.update(
     {
-        "stickers": "**Plugins : **`stickers`\
-    \n\n**  •  Syntax : **`.kang`\
-\n**  •  Function : **__Reply .kang to a sticker or an image to kang it to your userbot pack.__\
-\n\n**  •  Syntax : **`.kang [emoji('s)]`\
-\n**  •  Function : **__Works just like .kang but uses the emoji('s) you picked.__\
-\n\n**  •  Syntax : **`.kang [number]`\
-\n**  •  Function : **__Kang's the sticker/image to the specified pack but uses 🤔 as emoji.__\
-\n\n**  •  Syntax : **`.kang [emoji('s)] [number]`\
-\n**  •  Function : **__Kang's the sticker/image to the specified pack and uses the emoji('s) you picked.__\
-\n\n**  •  Syntax : **`.stickers name`\
-\n**  •  Function : **__shows you the list of non-animated sticker packs with that name.__\
-\n\n**  •  Syntax : **`.stkrinfo`\
-\n**  •  Function : **__Gets info about the sticker pack.__"
+        "stickers": "__**PLUGIN NAME :** Stickers__\
+\n\n📌** CMD ➥** `.kang`\
+\n**USAGE   ➥  **Reply .kang to a sticker or an image to kang it to your userbot pack.\
+\n\n📌** CMD ➥** `.kang [emoji('s)]`\
+\n**USAGE   ➥  **Works just like .kang but uses the emoji('s) you picked.\
+\n\n📌** CMD ➥** `.kang [number]`\
+\n**USAGE   ➥  **Kang's the sticker/image to the specified pack but uses 🤔 as emoji.\
+\n\n📌** CMD ➥** `.kang [emoji('s)] [number]`\
+\n**USAGE   ➥  **Kang's the sticker/image to the specified pack and uses the emoji('s) you picked.\
+\n\n📌** CMD ➥** `.stickers name`\
+\n**USAGE   ➥  **Shows you the list of non-animated sticker packs with that name.\
+\n\n📌** CMD ➥** `.stkrinfo`\
+\n**USAGE   ➥  **Gets info about the sticker pack."
     }
 )

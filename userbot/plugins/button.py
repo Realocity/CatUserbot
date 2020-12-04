@@ -104,13 +104,13 @@ def build_keyboard(buttons):
 
 CMD_HELP.update(
     {
-        "button": "**Plugin : **`button`\
-    \n\n**SYNTAX : **`.cbutton`\
-    \n**USAGE :** Buttons must be in the format as [Name on button]<buttonurl:link you want to open> and markdown is Default to html\
-    \n**EXAMPLE :** `.cbutton test [google]<buttonurl:https://www.google.com> [catuserbot]<buttonurl:https://t.me/catuserbot17:same> [support]<buttonurl:https://t.me/catuserbot_support>`\
-    \n\n**SYNTAX : **`.ibutton`\
-    \n**USAGE :** Buttons must be in the format as [Name on button]<buttonurl:link you want to open>\
-    \n**EXAMPLE :** `.ibutton test [google]<buttonurl:https://www.google.com> [catuserbot]<buttonurl:https://t.me/catuserbot17:same> [support]<buttonurl:https://t.me/catuserbot_support>`\
+        "button": "__**PLUGIN NAME :** Button__\
+    \n\n📌** CMD ➥** `.cbutton`\
+    \n**USAGE   ➥  **Buttons must be in th format as [name on button]<buttonurl:link you want to open> and narddown is Default to html\
+    \n\n**EXAMPLE :** `.cbutton test [google]<buttonurl:https://www.google.com> [catuserbot]<buttonurl:https://t.me/catuserbot17:same> [support]<buttonurl:https://t.me/catuserbot_support>`\
+    \n\n📌** CMD ➥** `.ibutton`\
+    \n**USAGE   ➥  **Buttons must be in th format as [name on button]<buttonurl:link you want to open>\
+    \n\n**EXAMPLE :** `.ibutton test [google]<buttonurl:https://www.google.com> [catuserbot]<buttonurl:https://t.me/catuserbot17:same> [support]<buttonurl:https://t.me/catuserbot_support>`\
     "
     }
 )

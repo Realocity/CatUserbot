@@ -34,9 +34,9 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "undlt": "**Plugin :** `undlt`\
-        \n**Syntax : **`.undlt <count>`\
-        \n**Usage: **Fetches last <count> number of deleted messages and sends you(you must be admin in that group)  \
+        "undlt": "__**PLUGIN NAME :** Undlt__\
+        \n\n📌** CMD ➥** `.undlt` <count>\
+        \n**USAGE   ➥  ***Fetches last <count> number of deleted messages and sends you(you must be admin in that group)  \
 "
     }
 )

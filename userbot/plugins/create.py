@@ -43,16 +43,15 @@ async def _(event):
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await event.edit(str(e))
-    elif type_of_group in ["g", "c"]:
+    elif type_of_group == "g" or type_of_group == "c":
         try:
             r = await event.client(
-                functions.channels.CreateChannelRequest(
+                functions.channels.CreateChannelRequest(  # pylint:disable=E0602
                     title=group_name,
                     about="This is a Test from @mrconfused",
-                    megagroup=type_of_group != "c",
+                    megagroup=False if type_of_group == "c" else True,
                 )
             )
-
             created_chat_id = r.chats[0].id
             result = await event.client(
                 functions.messages.ExportChatInviteRequest(
@@ -72,13 +71,14 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "create": "**SYNTAX :** `.create b`\
-    \n**USAGE : **Creates a super group and send you link\
-    \n\n**SYNTAX : **`.create g`\
-    \n**USAGE : **Creates a private group and sends you link\
-    \n\n**SYNTAX : **`.create c`\
-    \n**USAGE : **Creates a Channel and sends you link\
-    \n\nhere the bot accout is owner\
+        "create": "__**PLUGIN NAME :** Create__\
+    \n\n📌** CMD ➥** `.create b`\
+    \n**USAGE   ➥  **Creates a super group and send you link\
+    \n\n📌** CMD ➥** `.create g`\
+    \n**USAGE   ➥  **Creates a private group and sends you link\
+    \n\n📌** CMD ➥** `.create c`\
+    \n**USAGE   ➥  **Creates a Channel and sends you link\
+    \n\n**Here the bot accout is owner**\
     "
     }
 )

@@ -1,7 +1,10 @@
+"""Invite the user(s) to the current chat
+Syntax: .invite <User(s)>"""
+
 from telethon import functions
 
+from .. import CMD_HELP
 from ..utils import admin_cmd, sudo_cmd
-from . import CMD_HELP
 
 
 @bot.on(admin_cmd(pattern="invite ?(.*)"))
@@ -43,10 +46,8 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "invite": """**Plugin : **`invite`
-
-  •  **Syntax : **`.invite username(s)/userid(s)`
-  •  **Function : **__Add the given user/users to the group where u used the command__
-"""
+        "invite": "__**PLUGIN NAME :**Invite__\
+        \n\n📌** CMD ➥** `.invite` <username/useid>\
+        \n**USAGE   ➥  **To invite specified user in certain chat."
     }
 )

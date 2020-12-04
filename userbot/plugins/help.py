@@ -4,9 +4,7 @@ import requests
 from telethon import functions
 
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
-from . import ALIVE_NAME, CMD_HELP, CMD_LIST, SUDO_LIST, yaml_format
-
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "cat"
+from . import CMD_HELP, CMD_LIST, SUDO_LIST, mention, yaml_format
 
 HELPTYPE = Config.HELP_INLINETYPE or True
 
@@ -65,7 +63,7 @@ async def cmd_list(event):
             await event.delete()
     else:
         if HELPTYPE is True:
-            help_string = f"Userbot Helper. Provided by {DEFAULTUSER} to reveal all the plugins\
+            help_string = f"Userbot Helper. Provided by {mention} to reveal all the plugins\
                           \nCheck `.help plugin name` for commands, in case popup doesn't appear.\
                           \nCheck `.info plugin name` for usage of thoose plugins and commands"
             tgbotusername = Config.TG_BOT_USER_NAME_BF_HER
@@ -219,14 +217,14 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "help": """**Plugin : **`help`
-  •  **Syntax : **`.help/.help plugin_name`
-  •  **Function : **__If you just type .help then shows you help menu, if plugin name is given then shows you only commands in thst plugin and if you use `.help text` then shows you all commands in your userbot__
-  •  **Syntax : **`.info/.info plugin_name`
-  •  **Function : **__To get details/information/usage of that plugin__
-  •  **Syntax : **`.dc`
-  •  **Function : **__Shows your dc id and dc ids list__
-  •  **Syntax : **`.setinline (true|false)`
-  •  **Function : **__Sets help menu either in inline or text format__"""
+        "help": "__**PLUGIN NAME :** Help__\
+    \n\n📌** CMD ➥** `.help` <plugin name>\
+    \n**USAGE   ➥  **Get commands of a specific plugin.\
+    \n\n📌** CMD ➥** `.info` <plugin name>\
+    \n**USAGE   ➥  **To get commands and usage of a specific plugin.\
+    \n\n📌** CMD ➥** `.dc`\
+    \n**USAGE   ➥  **To get info list of telegram data centres.\
+    \n\n📌** CMD ➥** `.setinline true` <or> `.setinline false`\
+    \n**USAGE   ➥  **To enable or disable inline mode of help menu."
     }
 )

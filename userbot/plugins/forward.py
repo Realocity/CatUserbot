@@ -91,12 +91,12 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "forward": "**Plugin : **`forward`\
-    \n\n  •  **Synatax : **`frwd reply to any message`\
-    \n  •  **Function :  **__Enable Seen Counter in any message, to know how many users have seen your message__\
-    \n\n  •  **Syntax : **`.resend reply to message`\
-    \n  •  **Function : **__Just resend the replied message again in that chat__\
-    \n\n  •  **Syntax : **`.fpost text`\
-    \n  •  **Function : **__Split the word and forwards each letter from the messages cache if exists__"
+        "forward": "__**PLUGIN NAME :** Forward__\
+    \n\n📌** CMD ➥** `.frwd` <reply to any message>\
+    \n**USAGE   ➥  **Enable Seen Counter in any message, to know how many users have seen your message\
+    \n\n📌** CMD ➥** `.resend` reply to message\
+    \n**USAGE   ➥  **Just resend the replied message again in that chat__\
+    \n\n📌** CMD ➥** `.fpost text`\
+    \n**USAGE   ➥  **Split the word and forwards each letter from the messages cache if exists "
     }
 )

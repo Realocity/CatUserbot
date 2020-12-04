@@ -297,16 +297,16 @@ async def watcher(event):
 
 CMD_HELP.update(
     {
-        "gadmin": "**Plugin : **`gadmin`\
-        \n\n  •  **Syntax : **`.gban <username/reply/userid> <reason (optional)>`\
-\n  •  **Function : **__Bans the person in all groups where you are admin .__\
-\n\n  •  **Syntax : **`.ungban <username/reply/userid>`\
-\n  •  **Function : **__Reply someone's message with .ungban to remove them from the gbanned list.__\
-\n\n  •  **Syntax : **`.listgban`\
-\n  •  **Function : **__Shows you the gbanned list and reason for their gban.__\
-\n\n  •  **Syntax : **`.gmute <username/reply> <reason (optional)>`\
-\n  •  **Function : **__Mutes the person in all groups you have in common with them.__\
-\n\n  •  **Syntax : **`.ungmute <username/reply>`\
-\n  •  **Function : **__Reply someone's message with .ungmute to remove them from the gmuted list.__"
+        "gadmin": "__**PLUGIN NAME :** Gadmin__\
+\n\n📌** CMD ➥** `.gban` <username/reply/userid> <reason (optional)>\
+\n**USAGE   ➥  **Bans the person in all groups where you are admin .\
+\n\n📌** CMD ➥** `.ungban` <username/reply/userid>\
+\n**USAGE   ➥  **Reply someone's message with .ungban to remove them from the gbanned list.\
+\n\n📌** CMD ➥** `.listgban`\
+\n**USAGE   ➥  **Shows you the gbanned list and reason for their gban.\
+\n\n📌** CMD ➥** `.gmute` <username/reply> <reason (optional)>\
+\n**USAGE   ➥  **Mutes the person in all groups you have in common with them.\
+\n\n📌** CMD ➥** `.ungmute` <username/reply>\
+\n**USAGE   ➥  **Reply someone's message with .ungmute to remove them from the gmuted list."
     }
 )

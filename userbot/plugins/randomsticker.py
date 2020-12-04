@@ -125,14 +125,14 @@ async def lastfm(event):
 
 CMD_HELP.update(
     {
-        "randomsticker": """**Plugin : **`randomsticker`
-
-**Commands : **
-  •  `.cat`
-  •  `.dab`
-  •  `.brain`
-  •  `.pat`
-
-**Function : **__sends you random stickers of that category__ """
+        "randomsticker": "__**PLUGIN NAME :** Randomsticker__\
+      \n\n📌** CMD ➥** `.cat`\
+      \n**USAGE   ➥**  Random cat stickers\
+      \n\n📌** CMD ➥** `.dab`\
+      \n**USAGE   ➥**  Random dab stickers\
+      \n\n📌** CMD ➥** `.brain`\
+      \n**USAGE   ➥**  Random brain stickers\
+      \n\n📌** CMD ➥** `.pat`\
+      \n**USAGE   ➥**  Random pat stickers"
     }
 )

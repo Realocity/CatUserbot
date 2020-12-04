@@ -701,22 +701,22 @@ async def fetch_info(chat, event):
 
 CMD_HELP.update(
     {
-        "groupdata": "**Plugin : **`groupdata`\
-    \n\n**Syntax : **`.kickme`\
-    \n**Usage : **__Throws you away from that chat_\
-    \n\n**Syntax : **`.admins or .admins <username of group >`\
-    \n**Usage : **__Retrieves a list of admins in the chat.__\
-    \n\n**Syntax : **`.bots or .bots <username of group >`\
-    \n**Usage : **__Retrieves a list of bots in the chat.__\
-    \n\n**Syntax : **`.users or .users <name of member>`\
-    \n**Function : **__Retrieves all (or queried) users in the chat.__\
-    \n\n**Syntax : **`.unbanall`\
-    \n**Function: **__Unbans everyone who are blocked in that group __\
-    \n\n**Syntax : **`.ikuck`\
-    \n**Function: **__stats of the group like no of users no of deleted users.__\
-    \n\n**Syntax : **`.chatinfo or .chatinfo <username of group>`\
-    \n**Function : **__Shows you the total information of the required chat.__\
-    \n\n**Syntax : **`.zombies`\
-    \n**Function : **__Searches for deleted accounts in a group. Use `.zombies clean` to remove deleted accounts from the group.__"
+        "groupdata": "__**PLUGIN NAME :** Groupdata__\
+    \n\n📌** CMD ➥** `.kickme`\
+    \n**USAGE   ➥  **__Throws you away from that chat_\
+    \n\n📌** CMD ➥** `.admins` <or> `.admins <username of group >`\
+    \n**USAGE   ➥  **__Retrieves a list of admins in the chat.__\
+    \n\n📌** CMD ➥** `.bots` <or> `.bots <username of group >`\
+    \n**USAGE   ➥  **__Retrieves a list of bots in the chat.__\
+    \n\n📌** CMD ➥** `.users` <or> `.users <name of member>`\
+    \n**USAGE   ➥  **__Retrieves all (or queried) users in the chat.__\
+    \n\n📌** CMD ➥** `.unbanall`\
+    \n**USAGE   ➥  **__Unbans everyone who are blocked in that group __\
+    \n\n📌** CMD ➥** `.ikuck`\
+    \n**USAGE   ➥  **__stats of the group like no of users no of deleted users.__\
+    \n\n📌** CMD ➥** `.chatinfo` <or> `.chatinfo <username of group>`\
+    \n**USAGE   ➥  **__Shows you the total information of the required chat.__\
+    \n\n📌** CMD ➥** `.zombies`\
+    \n**USAGE   ➥  **__Searches for deleted accounts in a group. Use `.zombies clean` to remove deleted accounts from the group.__"
     }
 )
