@@ -20,7 +20,9 @@ Mute.__table__.create(checkfirst=True)
 
 def is_muted(sender, chat_id):
     user = SESSION.query(Mute).get((str(sender), str(chat_id)))
-    return bool(user)
+    if user:
+        return True
+    return False
 
 
 def mute(sender, chat_id):

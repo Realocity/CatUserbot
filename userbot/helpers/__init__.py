@@ -1,4 +1,4 @@
-from . import fonts
+from . import emojify, fonts
 from . import memeshelper as catmemes
 from .exceptions import CancelProcess
 from .functions import *
