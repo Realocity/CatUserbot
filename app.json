@@ -23,7 +23,7 @@
       "required": false
     },
     "ALIVE_NAME": {
-      "description": "Give your name, like Jisan",
+      "description": "Give your name, like Realocity",
       "value": ""
     },
     "APP_ID": {
